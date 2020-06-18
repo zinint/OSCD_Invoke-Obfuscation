@@ -36,7 +36,7 @@ you can copy the results from all cases for one obfuscation method and paste the
   - [CLIP++ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#clip-launcher-obfuscation-1)
   - [RUNDLL++ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#rundll-launcher-obfuscation-1)
   - [MSHTA++ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#mshta-launcher-obfuscation)
-##### MULTIPLE OBFUSCATIONS
+##### MULTIPLE OBFUSCATION
   - *Will be added later as well as the [second original command](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#original-command-before-obfuscation) (to find similarities in one obfuscation method for different commands)*
 
 ### TOKEN OBFUSCATION
