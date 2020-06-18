@@ -1,7 +1,7 @@
-# Hello, fellow OSCD participant!
+## Hello, fellow OSCD participant!
 This is your guide on how you can help us with soving this issue.
 
-# Tasklist
+## Tasklist
 You can pick up some of the methods of PowerShell command and script obfuscation, provided by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework from the table below and develop Sigma rules for them. You will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
 
 ## Original command
