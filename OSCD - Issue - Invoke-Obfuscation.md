@@ -32,7 +32,7 @@ you can copy the results from all cases for one obfuscation method and paste the
   - [STDIN+ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation)
   - [CLIP+ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#clip-launcher-obfuscation)
   - [VAR++ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#var-launcher-obfuscation-1)
-  - [STDIN+ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation-1)
+  - [STDIN++ LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation-1)
 ##### MULTIPLE OBFUSCATION
   - *Will be added later as well as the [second original command](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#original-command-before-obfuscation) (to find similarities in one obfuscation method for different commands)*
 
