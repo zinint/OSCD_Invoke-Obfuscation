@@ -78,14 +78,14 @@ you can copy the results from all cases for one or more obfuscation methods and 
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
 | Case # | Option #1 | Option #2 | Option #3 | Command #1 Result | Command #2 Result |
 | :---: | :---: | :---: | :---: | :--- | :--- |
-| 19 | ENCODING | ENCODING\1 | - | [EncObf-case19-command1result.md]() | [EncObf-case19-command2result.md]() |
-| 20 | ENCODING | ENCODING\2 | - | [EncObf-case20-command1result.md]() | [EncObf-case20-command2result.md]() |
-| 21 | ENCODING | ENCODING\3 | - | [EncObf-case21-command1result.md]() | [EncObf-case21-command2result.md]() |
-| 22 | ENCODING | ENCODING\4 | - | [EncObf-case22-command1result.md]() | [EncObf-case22-command2result.md]() |
-| 23 | ENCODING | ENCODING\5 | - | [EncObf-case23-command1result.md]() | [EncObf-case23-command2result.md]() |
-| 24 | ENCODING | ENCODING\6 | - | [EncObf-case24-command1result.md]() | [EncObf-case24-command2result.md]() |
-| 25 | ENCODING | ENCODING\7 | - | [EncObf-case25-command1result.md]() | [EncObf-case25-command2result.md]() |
-| 26 | ENCODING | ENCODING\8 | - | [EncObf-case26-command1result.md]() | [EncObf-case26-command2result.md]() |
+| 19 | ENCODING | ENCODING\1 | - | [EncObf-case19-command1result]() | [EncObf-case19-command2result]() |
+| 20 | ENCODING | ENCODING\2 | - | [EncObf-case20-command1result]() | [EncObf-case20-command2result]() |
+| 21 | ENCODING | ENCODING\3 | - | [EncObf-case21-command1result]() | [EncObf-case21-command2result]() |
+| 22 | ENCODING | ENCODING\4 | - | [EncObf-case22-command1result]() | [EncObf-case22-command2result]() |
+| 23 | ENCODING | ENCODING\5 | - | [EncObf-case23-command1result]() | [EncObf-case23-command2result]() |
+| 24 | ENCODING | ENCODING\6 | - | [EncObf-case24-command1result]() | [EncObf-case24-command2result]() |
+| 25 | ENCODING | ENCODING\7 | - | [EncObf-case25-command1result]() | [EncObf-case25-command2result]() |
+| 26 | ENCODING | ENCODING\8 | - | [EncObf-case26-command1result]() | [EncObf-case26-command2result]() |
 
 ### COMPRESS OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
