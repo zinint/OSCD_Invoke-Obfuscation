@@ -89,9 +89,9 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### COMPRESS OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-| Case # | Option #1 | Option #2 | Option #3 | Result |
-| :---: | :---: | :---: | :---: | :--- |
-| 27 | COMPRESS | COMPRESS\1 | - |  ( nEW-ObJEct  SYSTem.iO.sTReaMreaDEr( (nEW-ObJEct SySTEM.IO.COmpRESSIon.DEfLAtEsTream([SYsTEM.iO.memoRysTrEAM][sYsTem.CONvERT]::FrOMBaSe64sTrINg('TY67EoIwEEV/hU4sTMAoola+ZqTBgsJ6Q1ZAMcski/j5OlpoeWfOOXMz+6AbTg7PzqH3DdkgzHGYnPQVSw5yZHFGvWsbtDwWexpsS2AKdo2twlHN3PmVlA4GUTVc97r36Eqy/MZFSXe5bYnMkXprNvu/IWGBMFeJSheRWU7nulSxUTCbxaCS+KJSHQEYE2mZ2Qo9k/OyqMF1H1t0Ph6N10H2/f7LvgA='), [SYSTem.iO.COmPResSioN.ComPresSIoNmOde]::DeCOmprESs)),[sysTEM.TEXT.ENCOdInG]::AScII)).REaDtOeNd()| & ( $shELLid[1]+$ShellId[13]+'x')
+| Case # | Option #1 | Option #2 | Option #3 | Command #1 Result | Command #2 Result |
+| :---: | :---: | :---: | :---: | :--- | :--- |
+| 27 | COMPRESS | COMPRESS\1 | - |  ( nEW-ObJEct  SYSTem.iO.sTReaMreaDEr( (nEW-ObJEct SySTEM.IO.COmpRESSIon.DEfLAtEsTream([SYsTEM.iO.memoRysTrEAM][sYsTem.CONvERT]::FrOMBaSe64sTrINg('TY67EoIwEEV/hU4sTMAoola+ZqTBgsJ6Q1ZAMcski/j5OlpoeWfOOXMz+6AbTg7PzqH3DdkgzHGYnPQVSw5yZHFGvWsbtDwWexpsS2AKdo2twlHN3PmVlA4GUTVc97r36Eqy/MZFSXe5bYnMkXprNvu/IWGBMFeJSheRWU7nulSxUTCbxaCS+KJSHQEYE2mZ2Qo9k/OyqMF1H1t0Ph6N10H2/f7LvgA='), [SYSTem.iO.COmPResSioN.ComPresSIoNmOde]::DeCOmprESs)),[sysTEM.TEXT.ENCOdInG]::AScII)).REaDtOeNd()\| & ( $shELLid[1]+$ShellId[13]+'x') / 
 
 ### PS LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
