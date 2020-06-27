@@ -63,22 +63,24 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="center">2</td>
   <td align="center">TOKEN\COMMAND\2</td>
   <td nowrap> 
-   <p></p>
-   <p></p>
-   <p></p>
+   <p>&('In'+'voke-Expressi'+'o'+'n') (.('New-Ob'+'jec'+'t') Net.WebClient)</p>
+   <p>.('Inv'+'oke-Ex'+'pr'+'ess'+'ion') (&('Ne'+'w'+'-O'+'bject') Net.WebClient)</p>
+   <p>.('Invok'+'e-'+'Ex'+'pressio'+'n') (.('Ne'+'w-Ob'+'ject') Net.WebClient)</p>
+   <p>&('Invok'+'e-'+'Expr'+'ession') (&('New'+'-O'+'bj'+'ect') Net.WebClient)</p>
   </td>
-  <td align="left"></td>
+  <td align="left">This option does Splatting + Concatenate</td>
  </tr>
  <tr>
-  <td align="center"></td>
-  <td align="center"></td>
+  <td align="center">3</td>
+  <td align="center">TOKEN\COMMAND\3</td>
   <td nowrap> 
-   <p></p>
-   <p></p>
-   <p></p>
+   <p>&("{3}{4}{2}{1}{0}{5}"-f'o','essi','pr','Invo','ke-Ex','n') (.("{0}{2}{1}"-f 'Ne','t','w-Objec') Net.WebClient)</p>
+   <p>.("{0}{3}{2}{1}{4}" -f'I','-Ex','oke','nv','pression') (&("{2}{0}{1}" -f 'Obje','ct','New-') Net.WebClient)</p>
+   <p>.("{2}{3}{0}{1}"-f'o','n','Invoke-E','xpressi') (.("{0}{1}{2}"-f'Ne','w-O','bject') Net.WebClient)</p>
+   <p>&("{2}{3}{0}{4}{1}"-f 'e','Expression','I','nvok','-') (&("{0}{1}{2}"-f'N','ew-O','bject') Net.WebClient)</p>
   </td>
   <td align="left"></td>
-</table>  
+</table> 
 
 ### STRING OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
