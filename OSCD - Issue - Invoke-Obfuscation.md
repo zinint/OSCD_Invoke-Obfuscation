@@ -46,6 +46,25 @@ you can copy the results from all cases for one or more obfuscation methods and 
 | 1 | TOKEN\COMMAND\1 | <p> inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString <br> InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString <br> I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString </p> | This option basicaly applies ticks |
 
 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th, td {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+
 <table style="width:100%">
  <tr>
    <th>Case #</th>
