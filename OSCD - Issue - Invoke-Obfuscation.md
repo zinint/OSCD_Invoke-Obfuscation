@@ -57,7 +57,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>IN`V`OkE-EX`PressI`ON (nEW-`ob`JecT Net.WebClient)</p>
    <p>IN`VokE`-EXPr`es`sion (N`EW-ob`JeCT Net.WebClient)</p>
   </td>
-  <td align="left">This option basicaly applies ticks</td>
+  <td align="left">This option basically applies ticks</td>
  </tr>
  <tr>
   <td align="center">2</td>
