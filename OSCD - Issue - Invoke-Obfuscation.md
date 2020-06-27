@@ -4,15 +4,10 @@ You can pick up some of the methods of PowerShell command and script obfuscation
 
 #### Original code (before obfuscation)
 ```powershell
+# command example
 Invoke-Expression (New-Object Net.WebClient).DownloadString
-# original variable
+# variable example
 $env:path
-```
-#### Invoke-Obfuscation module premise
-```powershell
-Import-Module ./Invoke-Obfuscation.psd1
-Invoke-Obfuscation
-SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString
 ```
 #### Just pick the obfuscation method and the relevant сases you prefer and develop Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the case numbers you've solved:  
 (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/>
