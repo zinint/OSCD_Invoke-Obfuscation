@@ -41,7 +41,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### TOKEN OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)<br/>
-*TOKEN\STRING\1&2 skipped, because there are not any String tokens to obfuscate, but they do Concatenate and Reoder just like TOKEN\ARGUMENT\3&4 (Case #4&5)*
+*TOKEN\STRING\1&2 skipped, because there are not any String tokens to obfuscate, but they do Concatenate and Reoder just like TOKEN\ARGUMENT\3&4 (Cases #4&5)*
 <table style="word-break: keep-all;">
  <tr>
   <th align="center">Case #</th>
@@ -54,6 +54,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="center" nowrap>
    <p>TOKEN\COMMAND\1</p>
    <p>TOKEN\ARGUMENT\2</p>
+   <p>TOKEN\MEMBER\2</p>
   </td>
   <td nowrap>
    <strong>TOKEN\COMMAND\1</strong>
@@ -63,7 +64,11 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <strong>TOKEN\ARGUMENT\2</strong>
    <p>Invoke-Expression (New-Object n`eT.Web`Clie`Nt).DownloadString</p>
    <p>Invoke-Expression (New-Object Ne`T.WEb`CLIe`Nt).DownloadString</p>
-   <p>Invoke-Expression (New-Object n`ET.w`E`BCLIEnt).DownloadString</p>
+   <p>Invoke-Expression (New-Object n`ET.w`E`BCLIEnt).DownloadString</p>   
+   <strong>TOKEN\MEMBER\2</strong>
+   <p>Invoke-Expression (New-Object Net.WebClient)."Do`W`NLOa`dStriNg"</p>
+   <p>Invoke-Expression (New-Object Net.WebClient)."D`OWnlOa`DSTring"</p>
+   <p>Invoke-Expression (New-Object Net.WebClient)."D`O`wnLo`AD`StrinG"</p>
   </td>
   <td align="left">These options apply ticks.</td>
  </tr>
@@ -91,23 +96,42 @@ you can copy the results from all cases for one or more obfuscation methods and 
  </tr>
  <tr>
   <td align="center">4</td>
-  <td align="center">TOKEN\ARGUMENT\3</td>
-  <td nowrap> 
-   <p>Invoke-Expression (New-Object ('Ne'+'t.W'+'ebClient'))</p>
-   <p>Invoke-Expression (New-Object ('Net.W'+'eb'+'Client'))</p>
-   <p>Invoke-Expression (New-Object ('Net.We'+'b'+'Client'))</p>
+  <td align="center" nowrap>
+   <p>TOKEN\ARGUMENT\3</p>
+   <p>TOKEN\MEMBER\3</p>
   </td>
-  <td align="left">Just concatenation</td>
+  <td nowrap> 
+   <strong>TOKEN\ARGUMENT\3</strong>
+   <p>Invoke-Expression (New-Object ('Ne'+'t.W'+'ebClient')).DownloadString</p>
+   <p>Invoke-Expression (New-Object ('Net.W'+'eb'+'Client')).DownloadString</p>
+   <p>Invoke-Expression (New-Object ('Net.We'+'b'+'Client')).DownloadString</p>   
+   <strong>TOKEN\MEMBER\3</strong>
+   <p>Invoke-Expression (New-Object Net.WebClient).('Download'+'S'+'t'+'ring')</p>
+   <p>Invoke-Expression (New-Object Net.WebClient).('Down'+'lo'+'adS'+'tring')</p>
+   <p>Invoke-Expression (New-Object Net.WebClient).('Down'+'load'+'Stri'+'ng')</p>
+  </td>
+  <td align="left">Just Concatenate</td>
  </tr> 
  <tr>
   <td align="center">5</td>
   <td align="center">TOKEN\ARGUMENT\4</td>
   <td nowrap> 
-   <p>Invoke-Expression (New-Object ("{2}{3}{0}{1}{4}"-f'bClie','n','N','et.We','t'))</p>
-   <p>Invoke-Expression (New-Object ("{0}{1}{2}{3}"-f'Net','.W','ebClie','nt'))</p>
-   <p>Invoke-Expression (New-Object ("{1}{0}{2}" -f 't.W','Ne','ebClient'))</p>
+   <p>Invoke-Expression (New-Object ("{2}{3}{0}{1}{4}"-f'bClie','n','N','et.We','t')).DownloadString</p>
+   <p>Invoke-Expression (New-Object ("{0}{1}{2}{3}"-f'Net','.W','ebClie','nt')).DownloadString</p>
+   <p>Invoke-Expression (New-Object ("{1}{0}{2}" -f 't.W','Ne','ebClient')).DownloadString</p>
   </td>
-  <td align="left">Just reordering</td>
+  <td align="left">Just Reorder</td>
+ </tr> 
+ <tr>
+  <td align="center">6</td>
+  <td align="center"></td>
+  <td nowrap> 
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+  </td>
+  <td align="left"></td>
  </tr> 
  <tr>
   <td align="center"></td>
