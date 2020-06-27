@@ -40,7 +40,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   - *Will be added later as well as the [second original command](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#original-command-before-obfuscation) (to find similarities in one obfuscation method for different commands)*
 
 ### TOKEN OBFUSCATION
-[Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
+[Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)<br/>
 *TOKEN\STRING\1&2 skipped, because there are not any String tokens to obfuscate.*
 <table style="word-break: keep-all;">
  <tr>
