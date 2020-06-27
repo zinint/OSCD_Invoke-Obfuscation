@@ -5,6 +5,8 @@ You can pick up some of the methods of PowerShell command and script obfuscation
 #### Original code (before obfuscation)
 ```powershell
 Invoke-Expression (New-Object Net.WebClient).DownloadString
+# original variable
+$env:path
 ```
 #### Invoke-Obfuscation module premise
 ```powershell
