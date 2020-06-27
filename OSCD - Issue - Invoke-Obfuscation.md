@@ -2,7 +2,8 @@
 This is your guide on how you can help us all with soving this issue.     
 You can pick up some of the methods of PowerShell command and script obfuscation provided by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework below and develop Sigma rules for them. You will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules. Moreover the Invoke-Obfuscation User Guide:
 * Part 1 is [here](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide); 
-* Part 2 is [here](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide-part-2). <br/>
+* Part 2 is [here](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide-part-2);
+* And a great [presentation](https://www.sans.org/cyber-security-summit/archives/file/summit-archive-1492186586.pdf). <br/>
 It's always good to know the instrument (:
 
 #### Original code (before obfuscation)
