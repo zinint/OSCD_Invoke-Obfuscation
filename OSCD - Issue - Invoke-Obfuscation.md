@@ -2,7 +2,7 @@
 This is your guide on how you can help us all with soving this issue.     
 You can pick up some of the methods of PowerShell command and script obfuscation provided by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework below and develop Sigma rules for them. You will need to use [regular expressions](https://github.com/Neo23x0/sigma/wiki/Specification#types) in Sigma rules.
 
-#### Original command (before obfuscation)
+#### Original code (before obfuscation)
 ```powershell
 Invoke-Expression (New-Object Net.WebClient)
 ```
@@ -10,7 +10,7 @@ Invoke-Expression (New-Object Net.WebClient)
 ```powershell
 Import-Module ./Invoke-Obfuscation.psd1
 Invoke-Obfuscation
-SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient).DownloadString
+SET SCRIPTBLOCK Invoke-Expression (New-Object Net.WebClient)
 ```
 #### Just pick the obfuscation method and the relevant сases you prefer and develop Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the case numbers you've solved:  
 (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/>
@@ -44,21 +44,40 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 <table style="word-break: keep-all;">
  <tr>
-   <th align="center">Case #</th>
-   <th align="center">Option</th>
-   <th align="center">Results</th>
-   <th align="center">Comments</th>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
  </tr>
  <tr>
-   <td align="center">1</td>
-   <td align="center">TOKEN\COMMAND\1</td>
-   <td nowrap> 
-     <p>inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString</p>
-     <p>InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString</p>
-     <p>I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString</p>
-   </td>
-   <td align="left">This option basicaly applies ticks</td>
+  <td align="center">1</td>
+  <td align="center">TOKEN\COMMAND\1</td>
+  <td nowrap> 
+   <p>Inv`Ok`E-Ex`P`ResSiON (NEW`-o`BJECT Net.WebClient)</p>
+   <p>IN`V`OkE-EX`PressI`ON (nEW-`ob`JecT Net.WebClient)</p>
+   <p>IN`VokE`-EXPr`es`sion (N`EW-ob`JeCT Net.WebClient)</p>
+  </td>
+  <td align="left">This option basicaly applies ticks</td>
  </tr>
+ <tr>
+  <td align="center">2</td>
+  <td align="center">TOKEN\COMMAND\2</td>
+  <td nowrap> 
+   <p></p>
+   <p></p>
+   <p></p>
+  </td>
+  <td align="left"></td>
+ </tr>
+ <tr>
+  <td align="center"></td>
+  <td align="center"></td>
+  <td nowrap> 
+   <p></p>
+   <p></p>
+   <p></p>
+  </td>
+  <td align="left"></td>
 </table> 
 
 ### STRING OBFUSCATION
