@@ -4,7 +4,7 @@ You can pick up some of the methods of PowerShell command and script obfuscation
 * Part 1 is [here](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide); 
 * Part 2 is [here](https://www.danielbohannon.com/blog-1/2017/12/2/the-invoke-obfuscation-usage-guide-part-2); 
 * etc.  
-it's always good to know the instrument (:
+It's always good to know the instrument (:
 
 #### Original code (before obfuscation)
 ```powershell
