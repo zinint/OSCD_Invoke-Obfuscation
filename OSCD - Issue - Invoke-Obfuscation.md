@@ -41,16 +41,13 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### TOKEN OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-
+*TOKEN\STRING\1&2 skipped, because there are not any String tokens to obfuscate.*
 <table style="word-break: keep-all;">
  <tr>
   <th align="center">Case #</th>
   <th align="center">Option</th>
   <th align="center">Results</th>
   <th align="center">Comments</th>
- </tr>
- <tr> 
-   <td> TOKEN\STRING\1&2 skipped, because there are not any String tokens to obfuscate </td>
  </tr>
  <tr>
   <td align="center">1</td>
@@ -81,7 +78,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p></p>
   </td>
   <td align="left"></td>
-</table> 
+</table>  
 
 ### STRING OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
