@@ -49,6 +49,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Results</th>
   <th align="center">Comments</th>
  </tr>
+ <tr> TOKEN\STRING\1&2 skipped, because there are not any String tokens to obfuscate </tr>
  <tr>
   <td align="center">1</td>
   <td align="center">TOKEN\COMMAND\1</td>
