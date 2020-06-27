@@ -41,7 +41,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### TOKEN OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)<br/>
-*TOKEN\STRING\1&2 skipped, because there are not any String tokens to obfuscate.*
+*TOKEN\STRING\1&2 skipped, because there are not any String tokens to obfuscate, but they do Concatenate and Reoder just like TOKEN\ARGUMENT\3&4 (Case #4&5)*
 <table style="word-break: keep-all;">
  <tr>
   <th align="center">Case #</th>
