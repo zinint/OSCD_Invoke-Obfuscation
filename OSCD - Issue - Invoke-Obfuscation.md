@@ -197,9 +197,9 @@ you can copy the results from all cases for one or more obfuscation methods and 
   </td>
   <td nowrap>
    <p><strong>Covered by the great author himself, even for the method commented out in the code (if you'll be able to implement a non case sensitive regex)</strong></p>
-   <p>https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml</p>
-   <p>https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml</p>
-   <p>https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml</p>
+   <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml">Rule # 1</a></p>
+   <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml">Rule # 2</a></p>
+   <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml">Rule # 3</a></p>
    <p><strong>Again, don't hesitate to check the work done and improve it, if you know how.</strong></p>
   </td>
   <td align="left">These options can Concatenate entire command || Reorder entire command after concatenating. || Reverse entire command after concatenating</td>
