@@ -247,7 +247,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">13</td>
   <td align="center">ENCODING\3</td>
-  <td nowrap>
+  <td>
    <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 (if you'll be able to implement a non case sensitive regex), that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p>  
    <p>IEX ( -jOIn ('111x156P166<157C153P145&55&105&170t160x162}145<163x163n151t157}156n40C50}116}145<167;55n117x142}152C145P143x164C40~116n145t164P56}127t145n142<103&154n151x145;156;164n51x56n104<157<167P156&154x157t141t144n123~164~162}151~156C147'.sPliT('&x<P}t~;nC' ) |FOReACh {([cOnVERT]::toINT16( ( [sTrinG]$_ ) ,8) -as[CHaR])}) )</p>
    <p> [STRinG]::JOiN('',( (111,156 ,166 , 157, 153,145,55, 105, 170, 160 , 162 ,145 ,163,163,151 ,157 ,156,40,50, 116,145 ,167 , 55,117,142 ,152,145 , 143, 164,40 , 116 ,145,164 , 56 , 127 , 145, 142 ,103, 154, 151 ,145 ,156,164, 51, 56 ,104, 157, 167 , 156 ,154, 157,141 ,144,123,164 , 162 , 151 ,156, 147)|foReacH{([cHAR] ( [convERt]::ToINT16(( [striNG]$_) ,8))) } )) | iEx</p>
@@ -259,7 +259,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">14</td>
   <td align="center">ENCODING\4</td>
-  <td nowrap> 
+  <td> 
    <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 (if you'll be able to implement a non case sensitive regex), that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p> 
    <p> iNvOKE-EXPReSsiON ( ( (1001001 , 1101110 ,1110110,1101111 ,1101011, 1100101 ,101101 , 1000101 , 1111000, 1110000,1110010, 1100101 ,1110011,1110011 ,1101001 , 1101111,1101110 ,100000,101000 ,1001110, 1100101, 1110111,101101 ,1001111 ,1100010, 1101010, 1100101 ,1100011,1110100,100000 , 1001110,1100101 , 1110100, 101110,1010111 ,1100101,1100010 , 1000011, 1101100 , 1101001, 1100101 ,1101110 ,1110100 , 101001,101110, 1000100,1101111 ,1110111 , 1101110, 1101100, 1101111 , 1100001 ,1100100 , 1010011 ,1110100,1110010, 1101001,1101110 ,1100111)| fOREach-ObjECt{([cHAR] ( [COnveRT]::toinT16(([sTriNG]$_ ) ,2 ) )) })-joIN'') </p>
    <p> Iex ([stRIng]::jOIN( '' , ((1001001 , 1101110, 1110110,1101111,1101011 , 1100101,101101 ,1000101, 1111000,1110000 ,1110010 , 1100101 ,1110011 ,1110011, 1101001,1101111,1101110,100000 , 101000 , 1001110 , 1100101 ,1110111 ,101101 ,1001111 , 1100010, 1101010, 1100101,1100011 ,1110100, 100000,1001110,1100101 ,1110100, 101110 , 1010111, 1100101,1100010,1000011, 1101100 , 1101001 ,1100101 ,1101110 ,1110100 , 101001 , 101110 ,1000100 , 1101111, 1110111 , 1101110,1101100,1101111 ,1100001 ,1100100 ,1010011 ,1110100 ,1110010 , 1101001 , 1101110, 1100111) | foReaCH-obJEct{([cONVert]::toiNT16(( $_.TOStRInG()), 2 )-as [CHaR]) }) ))</p>
@@ -287,7 +287,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">16</td>
   <td align="center">ENCODING\6</td>
-  <td nowrap> 
+  <td> 
    <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 (if you'll be able to implement a non case sensitive regex), that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p>
    <p> [sTRIng]::JoIn('', ('66z101J125!100J96h110Y38U78U115J123U121!110Y120Y120-98-100Y101J43!35z69-110Y124I38-68U105!97z110h104I127-43!69I110I127U37z92J110T105U72-103z98D110T101U127U34D37z79!100z124D101D103I100z106h111Y88U127J121-98h101J108'-SPlIt'h'-SpLIt 'u'-SpLiT '-'-sPliT'd' -sPLIT'y'-SPLIT'i'-spLIt'z'-SpliT 'J' -SpLit '!' -SPliT 'T'|FOReacH-oBJecT { [CHaR] ($_-bXor '0x0b' ) }) ) | iEX</p>
    <p> [sTrinG]::JoIn( '', ([Char[]]( 100 ,67 , 91, 66,70 ,72, 0 ,104,85,93, 95 ,72,94, 94 , 68 , 66 ,67 , 13 ,5 ,99 , 72,90, 0 ,98 , 79, 71 ,72,78, 89 , 13 ,99, 72,89, 3 , 122 ,72 ,79, 110,65,68,72, 67 ,89,4 , 3, 105 , 66 ,90,67,65 ,66 , 76,73, 126,89,95,68,67 , 74 )| fOREach {[Char] ( $_ -BxOr  0x2D  ) })) | iEx</p>
