@@ -298,10 +298,10 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="center">17</td>
   <td align="center">ENCODING\7</td>
   <td nowrap> 
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_1l">Example 1</a></p>
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_2l">Example 2</a></p>
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_3l">Example 3</a></p>
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_4l">Example 4</a></p>
+   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_1">Example 1</a></p>
+   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_2">Example 2</a></p>
+   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_3">Example 3</a></p>
+   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_4">Example 4</a></p>
   </td>
   <td align="left">This option encodes the entire command as Special Characters</td>
  </tr> 
