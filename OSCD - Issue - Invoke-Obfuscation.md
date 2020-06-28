@@ -21,7 +21,7 @@ $env:path
 #### A little tip for your regex development:
 you can copy the results from all cases for one or more obfuscation methods and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
 
-#### Important! This is Open Security Collaborative Development, which is Open international cybersecurity specialist initiative aiming to solve common problems, share knowledge, and improve general security posture - DO NOT HESITATE to check the work done and improve it, if you know how!
+#### IMPORTANT! This is Open Security Collaborative Development, which is Open international cybersecurity specialist initiative aiming to solve common problems, share knowledge, and improve general security posture - DO NOT HESITATE to check the work done and improve it, if you know how!
 
 ## Contents
 ##### SINGLE OBFUSCATION
