@@ -196,7 +196,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>STRING\3</p>
   </td>
   <td>
-   <p><strong>Covered by the great author himself, even for the method commented out in the code (if you'll be able to implement a non case sensitive regex)</strong></p>
+   <p><strong>Covered by the great author himself (if you'll be able to implement a non case sensitive regex), even for the method commented out in the code</strong></p>
    <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml">Rule # 1</a></p>
    <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml">Rule # 2</a></p>
    <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml">Rule # 3</a></p>
