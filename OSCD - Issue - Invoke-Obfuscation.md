@@ -196,7 +196,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>STRING\3</p>
   </td>
   <td nowrap>
-   <p><strong>Covered by the great author himself (even for a method commented out in the code)</strong></p>
+   <p><strong>Covered by the great author himself, even for the method commented out in the code (if you'll be able to implement a non case sensitive regex)</strong></p>
    <p>https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml</p>
    <p>https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml</p>
    <p>https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml</p>
@@ -204,11 +204,10 @@ you can copy the results from all cases for one or more obfuscation methods and 
   </td>
   <td align="left">These options can Concatenate entire command || Reorder entire command after concatenating. || Reverse entire command after concatenating</td>
  </tr>
- </table> 
+</table> 
 
 ### ENCODING OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-#### ENCODING
 <table style="word-break: keep-all;">
  <tr>
   <th align="center">Case #</th>
@@ -220,7 +219,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="center">11</td>
   <td align="center">ENCODING\1</td>
   <td>
-   <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 if you'll be able to implement a non case sensitive regex, that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p>
+   <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 (if you'll be able to implement a non case sensitive regex), that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p>
    <p> IEx([StrING]::JOin('', ( '34@32@36:40k32R83P101k116~32R32u39~111T102k83~39u32k32~39@39z41~32z34T43:32@91R115u84_114k73k78P71R93~40u32u40@55u51~32u44T49u49k48@44P49P49T56@44_32u49z49@49R44~32k49R48k55~44k49_48T49:32k44:52u53z32@44u32z54~57k32R44z49R50z48P32P44z32k49u49_50~44_32k49z49R52R32:44:49@48u49k32T44@32R49T49P53:32@44:32u49u49k53_44~32@49@48:53@32z44R32:49R49_49@44~49P49:48T44_32u51z50:
    32P44z52T48u32@44T55_56u44_49P48:49:44P32:49u49T57u32z44k52k53z44@32z55k57P32_44@32z57k56k32T44~32:49@48R54P44P49~48T49P32k44~32T57R57_44~49u49u54:44R32:51~50P32z44P32@55P56_32_44k32@49T48:49R44T49u49@54~44R52z54z44z56R55_44~49T48k49u32R44_57k56k44:54~55:32:44:32R49k48~56k44R32~49_48k53z32P44:49~48:49~32u44k32u49_49_48:
    32T44u49R49_54R44T52T49u44~52z54u44R32T54k56:32k44u49:49~49z44_32T49P49_57~44@49R49u48u32:44T32R49z48z56u44k32T49P49~49k44P57u55:44z32z49@48z48~32u44@32T56@51R32_44@49T49@54k44T32:49u49~52R44u32:49:48~53_32P44u32:49:49u48~44R49z48z51R41_124@32@70:79u114P101@65:67:104k45k79z98_74@69k67:
@@ -235,7 +234,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="center">12</td>
   <td align="center">ENCODING\2</td>
   <td>
-   <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 if you'll be able to implement a non case sensitive regex, that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p> 
+   <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 (if you'll be able to implement a non case sensitive regex), that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p> 
    <p>-joIn ( '49_6e-76_6fP6b_65{2d!45_78V70_72{65-73!73P69!6fG6eP20P28!4e{65G77{2d!4fV62~6a{65~63_74~20-4eP65_74!2e_57-65{62{43G6c~69P65G6eG74P29P2eG44!6f-77V6eV6cP6f{61P64~53~74_72!69G6e-67'-SpLIT '_' -SPlIt '~' -SPLIT '!'-SPlIt '{' -SPLIt 'G'-SPlit'P'-SPLit 'V'-sPLit '-' |% { ( [ConVERT]::TOinT16( ( $_.TOSTrInG() ), 16 ) -As[chAR]) } )| INvoKe-eXPReSSION</p>
    <p> ( '49}6eU76w6f:6b:65U2dV45w78V70w72:65V73,73}69}6fU6e}20:28>4e,65>77U2dV4fV62,6a-65>63,74w20V4eU65U74:2e:57>65V62>43:6c-69:65U6eU74}29}2e>44U6f:77w6e,6c:6f>61V64>53-74}72V69}6ew67'.SpLIT('VU},w>:-')|foREAch-obJect { ( [conVeRt]::ToiNT16(( [string]$_ ), 16 ) -as [ChAR])} ) -join'' |IEx</p>
    <p> IEX([StRIng]::jOin('' ,('49>6ex76~6f>6bo65x2d%45%78%70}72}65~73w73~69>6f%6e;20w28~4e;65%77>2d;4fw62;6ax65;63}74%20>4eo65o74%2e>57}65%62>43~6c>69;65~6e~74o29;2e%44w6fx77;6ew6cw6fx61o64x53%74o72~69~6e~67'.SPlIT( '%~o};>xw' )| %{ ([ConVERt]::TOINt16( ( [striNg]$_), 16 ) -as[CHar])}))) </p>
@@ -258,7 +257,6 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### COMPRESS OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-
 
 ### PS LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
