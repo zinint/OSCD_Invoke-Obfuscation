@@ -204,6 +204,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   </td>
   <td align="left">These options can Concatenate entire command || Reorder entire command after concatenating. || Reverse entire command after concatenating</td>
  </tr>
+ </table> 
 
 ### ENCODING OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
