@@ -322,6 +322,26 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### COMPRESS OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">19</td>
+  <td align="center">COMPRESS\1</td>
+  <td>
+   <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 (if you'll be able to implement a non case sensitive regex), that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p>
+   <p> (neW-obJECT sYSTEm.io.CompReSSiOn.deFlAteStReam([io.MEmOrYsTreAm] [sysTEm.COnVErT]::frOMBase64strInG('88wry89O1XWtKChKLS7OzM9T0PBLLdf1T8pKTS5R8Est0QtPTXLOyUzNK9HUc8kvz8vJT0wJLinKzEsHAA==' ) ,[sYsTEM.IO.compReSSiON.cOMPReSSIoNMOde]::dEcOMprEss ) | fOreach { neW-obJECT IO.StReamreadeR( $_ ,[syStEM.teXt.ENCodING]::AsCII) } |ForEAcH{ $_.reADToEND()} )| IEx</p>
+   <p>Iex( new-oBJeCt  sYStem.IO.CoMprESsIOn.DefLatEsTREam( [Io.mEmOrYstreAM][SYsTem.conveRT]::FROmBASE64stRING( '88wry89O1XWtKChKLS7OzM9T0PBLLdf1T8pKTS5R8Est0QtPTXLOyUzNK9HUc8kvz8vJT0wJLinKzEsHAA==' ) ,[io.CoMpREssiON.COmpresSionmODe]::dECoMPresS )|%{ new-oBJeCt  io.sTREamREAdER( $_ ,[Text.ENcOdinG]::ASCII ) }| % {$_.reAdToenD( ) }) </p>
+   <p>InvOKE-ExPresSiOn (nEW-ObjeCt  SySteM.IO.compReSSion.DEFLaTeSTReAM( [IO.mEmOrYstReaM] [CONvERT]::frOMBASe64stRING('88wry89O1XWtKChKLS7OzM9T0PBLLdf1T8pKTS5R8Est0QtPTXLOyUzNK9HUc8kvz8vJT0wJLinKzEsHAA=='),[SYSteM.iO.CoMPREssIoN.ComPressiONmoDe]::DecOMPREss) |% { nEW-ObjeCt  syStEM.io.stREaMrEadeR( $_ ,[tEXT.ENCodiNG]::ascIi ) } ).rEADtOend()</p>
+   <p> IEX (NEw-oBjEcT  SYsTEM.io.streamrEader((NEw-oBjEcT  io.comPREssion.DEFlATeStReam( [Io.memorystrEam] [coNvert]::FROmbase64sTRiNg('88wry89O1XWtKChKLS7OzM9T0PBLLdf1T8pKTS5R8Est0QtPTXLOyUzNK9HUc8kvz8vJT0wJLinKzEsHAA==' ) , [SystEm.Io.cOMpREsSiON.coMPReSSIonMODE]::DecompREsS)), [TeXT.EncOdIng]::aScii) ).rEADtoeND()</p>
+  </td>
+  <td align="left">This option converts the entire command to one-liner and compresses it</td>
+ </tr>
+</table> 
 
 ### PS LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
