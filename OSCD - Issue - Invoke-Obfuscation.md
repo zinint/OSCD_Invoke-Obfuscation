@@ -269,7 +269,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">15</td>
   <td align="center">ENCODING\5</td>
-  <td nowrap> 
+  <td> 
    <p><strong>Partialy covered by the same Sigma rules mentioned in case 10 (if you'll be able to implement a non case sensitive regex), that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. These are examples of some not covered obfuscations:</strong></p> 
    <p>([rUnTImE.InteropSErvICes.mARShAL]::pTRTosTrINGUnI([rUNTime.INtEropServicEs.marShal]::SeCUreSTRIngTOglObalALLocuniCODE( $('76492d1116743f0423413b16050a5345MgB8AGYALwAzAGEAMwBrAEwAYQBIAGkAeAB6AFkASgBGADMAZgBpAGUANgBoAEEAPQA9AHwANQAzADcAYwAwADYAZQA3AGMAMgA4AGIANAAyADAAMQBjADIAYQA2ADEAYQA4AGIAMgA4ADQAYQA5ADIAMQAwADkAMQBkADkAMwAxADEANwAzAGYAOABiADYAZABlADUANQBlADkAMgAyADkAZgA2ADEAMgA0AGUAZAAwADMAMAA2ADMANgAyADgAOAA5ADkANgA1ADkAMQBhAGQAYwA4ADkANwBmADUAOABmADgANgA3AGYAYQAzADYAYgAwA
    DYANwA3ADQAMwBiAGYANwA1AGYAYwA0ADgANwA2AGMAMABkAGQAMgBmAGMANwBmADAAMgA0ADAAZgBmADQANQAxADcAMQAyAGMANwBmAGIANAA3ADEAZQBkADMAMQA4AGYAOQBlAGUAMQAyADYAYgA4ADgAYwBkADgAOQA0ADYAZABkAGYAMwBjADQANAA4ADgAOQA0AGMAYwA1ADQANQBlAGUANABhAGEAZQBmADkAZABjAGIANQBlAGUANABlADAAMQBlADQAMQA3AGQAYQBjADUAYgA0AGYAOABlADgAMQA3AGEANABjAGYAOQBjADMANgA1ADIANwAyAGYAOQA1ADIAOABmADIAYQBmADIAOAA4AGMAYQBiAGEANwBkADAAYgBmADkAMAA4ADQAOQA4AGIAYQBiADYANgBhAGUAYgA='|COnvertto-secuREstRIng -KEY  (242..227)) )) )|ieX</p>
