@@ -306,16 +306,16 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="left">This option encodes the entire command as Special Characters</td>
  </tr> 
  <tr>
-  <td align="center"></td>
-  <td align="center"></td>
+  <td align="center">18</td>
+  <td align="center">ENCODING\8</td>
   <td nowrap> 
-   <p></p>
-   <p></p>
-   <p></p>
-   <p></p>
+   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_8_1">Example 1</a></p>
+   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_8_2">Example 2</a></p>
+   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_8_3">Example 3</a></p>
+   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_8_4">Example 4</a></p>
   </td>
-  <td align="left"></td>
- </tr>
+  <td align="left">This option encodes the entire command as Whitespace</td>
+ </tr> 
 </table> 
 
 ### COMPRESS OBFUSCATION
