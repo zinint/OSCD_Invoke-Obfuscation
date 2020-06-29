@@ -431,8 +431,8 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">21</td>
   <td align="center">LAUNCHER\CMD\*</td>
-  <td>
-   <p><strong>Options LAUNCHER\CMD\0 - LAUNCHER\CMD\8 of this launcher apply the same obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>:</strong></p>
+  <td nowrap>
+   <p><strong>Options LAUNCHER\CMD\0 - LAUNCHER\CMD\8 of this launcher apply the same obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for CMD indicators:</strong></p>
    <p>cMD  /c   poWersHEll   </p>
    <p>C:\wINDOWs\SYstEM32\CmD.EXe  /c  PoWeRsHELL  -nOexi  </p>
    <p>cMd.EXe  /c   PoweRSHell -nonin    </p>
@@ -442,7 +442,6 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>C:\WiNDoWS\SysTEM32\cMD  /c  PowErshEll  -wI  hI   </p>
    <p>cmd  /c  poWERSHeLL  -Ep bYPASS   </p>
    <p>CMd.exE/CC:\wiNdows\SySwOw64\WindowSpOWErshelL\v1.0\PoWErshELL.Exe  </p>
-   <p><strong>>>> so in this case we should only hunt for CMD indicators</strong></p>
   </td>
   <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
  </tr>
@@ -460,8 +459,8 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">21</td>
   <td align="center">LAUNCHER\WMIC\*</td>
-  <td>
-   <p><strong>Options LAUNCHER\WMIC\0 - LAUNCHER\WMIC\8 of this launcher apply the same obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>:</strong></p>
+  <td nowrap>
+   <p><strong>Options LAUNCHER\WMIC\0 - LAUNCHER\WMIC\8 of this launcher apply the same obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for WMIC indicators:</strong></p>
    <p>WMIC "ProcESs"    CaLL   CREATE   "powersHELl</p>
    <p>wMIC.exE 'PRoceSS'  'caLL'  crEatE  "poWERshelL  -nOeXiT</p>
    <p>c:\wINdoWS\sYstEM32\wbem\Wmic 'PrOCEss'    cALl    CReAtE "poWERShELl  -nONINtERac</p>
@@ -471,7 +470,6 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>c:\wINdOWS\systEm32\WbEM\wMic.EXE  PRocESs     CALL   cReate  "PowERsHell  -w HIDdE</p>
    <p>wMic.Exe   "PrOCESS"    CAlL    creaTE  "POWershelL  -EXEcuTIOnpo BYpaSS    I</p>
    <p>wmIc.eXE   "PRoCEss" "cALl"  'CreAte' "c:\WiNdows\sYswOW64\wINDOwspowErSHElL\V1.0\powerShelL.ExE</p>
-   <p><strong>>>> so in this case we should only hunt for WMIC indicators</strong></p>
   </td>
   <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
  </tr>
