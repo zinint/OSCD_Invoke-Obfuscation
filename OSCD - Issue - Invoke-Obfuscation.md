@@ -16,7 +16,7 @@ $env:path
 [Scriptblock]::Create("Write-Host $env:path")
 ```
 #### Remember that our main goal here is to detect the obfuscation method itself, not a specific command.
-Some obfuscations are already covered by the Invoke-Obfuscation author himself, even for the method commented out in the code:
+Some obfuscations are already covered by the Invoke-Obfuscation author himself, even for the method commented out in the framework's code:
 [Sigma Rule #1](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml),
 [Sigma Rule #2](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml),
 [Sigma Rule #3](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml). You'll encounter patterns from these rules further on, that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Due to that fact you'll see some similar obfuscation results in different cases, that shouldn't distract you from our goal - we want to be able to detect the obfuscation method itself, not an obfuscation of a particular command, e.g. in [task 25](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation) with the STDIN+ launcher, you should pay attention to ```cmd /c``` and ```| powershell``` patterns rather than the used command example or the ```$SHElLID[1]+$ShELlId[``` pattern. 
