@@ -15,6 +15,23 @@ $env:path
 # type token example
 [Scriptblock]::Create("Write-Host $env:path")
 ```
+
+<br><br>
+<h2>Sigma rules for Invoke-Obfuscation</h2>
+<table>
+  <tr>
+    <th>GitHub Issue (list of tasks inside)</th>
+    <th>Required Knowledge</th>
+    <th>ETC per task</th>
+  </tr>
+  <tr>
+    <td><a href="%URL%" target="_blank">Living Off The Land Binaries and Scripts</a></td>
+    <td>Powershell, Regex, Sigma Rules</td>
+    <td>~ 30 min for each task</td>
+  </tr>
+</table>
+<br><br>
+
 ### Remember that our main goal here is to detect the obfuscation method itself, not a specific command.
 Some obfuscations are already covered by the Invoke-Obfuscation author himself, even for the method commented out in the framework's code:
 [Sigma Rule #1](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml),
