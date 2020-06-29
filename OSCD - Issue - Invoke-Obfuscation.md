@@ -17,7 +17,7 @@ $env:path
 ```
 #### Just pick the obfuscation method and the relevant сases you prefer and develop Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the case numbers you've solved:  
 (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/>
-#### Remember that our main goal is to detect the method itself, not a specific command.
+#### Remember that our main goal here is to detect the obfuscation method itself, not a specific command.
 #### A little tip for your regex development:
 you can copy the results from all cases for one or more obfuscation methods and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
 
@@ -202,6 +202,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml">Rule # 1</a></p>
    <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml">Rule # 2</a></p>
    <p><a href="https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml">Rule # 3</a></p>
+   <p><strong>You'll encounter patterns from these rules further on, that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own.</p></strong>
    <p><strong>Again, don't hesitate to check the work done and improve it, if you know how.</strong></p>
   </td>
   <td align="left">These options can Concatenate entire command || Reorder entire command after concatenating || Reverse entire command after concatenating</td>
