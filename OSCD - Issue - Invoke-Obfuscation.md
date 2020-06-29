@@ -468,7 +468,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>WMIC  PrOCESS   "caLL" 'cReAte'   "poWeRShEll -NOp</p>
    <p>C:\windoWS\sysTEm32\wbem\WmiC.ExE  PROCeSS  'caLl' 'CREatE'  </p>
    <p>c:\wINdOWS\systEm32\WbEM\wMic.EXE  PRocESs     CALL   cReate  "PowERsHell  -w HIDdE</p>
-   <p>wMic.Exe   "PrOCESS"    CAlL    creaTE  "POWershelL  -EXEcuTIOnpo BYpaSS    I</p>
+   <p>wMic.Exe   "PrOCESS"    CAlL    creaTE  "POWershelL  -EXEcuTIOnpo BYpaSS    </p>
    <p>wmIc.eXE   "PRoCEss" "cALl"  'CreAte' "c:\WiNdows\sYswOW64\wINDOwspowErSHElL\V1.0\powerShelL.ExE</p>
   </td>
   <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
