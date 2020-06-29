@@ -17,8 +17,12 @@ $env:path
 ```
 #### Just pick the сases you prefer and develop Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the case numbers you've solved:  
 (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/>
-#### Remember that our main goal here is to detect the obfuscation method itself, not a specific command.
-Due to framework's code you'll encounter some similar obfuscation results for some commands (explained in [case 10](https://github.com/zinint/OSCD_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#string-obfuscation)), that shouldn't distract you from our goal - we want to be able to detect the obfuscation method itself, not an obfuscation of a particular command, e.g. in [case 25](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation) with the STDIN+ launcher, you should pay attention to ```cmd /c``` and ```| powershell``` patterns rather than the used command example or the ```$SHElLID[1]+$ShELlId[``` pattern. 
+### Remember that our main goal here is to detect the obfuscation method itself, not a specific command.
+Some obfuscations are already covered by the Invoke-Obfuscation author himself, even for the method commented out in the code:
+[Rule # 1](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml)
+[Rule # 2](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml)
+[Rule # 3](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml)
+You'll encounter patterns from these rules further on, that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Due to that fact you'll see some similar obfuscation results in different cases, that shouldn't distract you from our goal - we want to be able to detect the obfuscation method itself, not an obfuscation of a particular command, e.g. in [case 25](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation) with the STDIN+ launcher, you should pay attention to ```cmd /c``` and ```| powershell``` patterns rather than the used command example or the ```$SHElLID[1]+$ShELlId[``` pattern. 
 
 #### A little tip for your regex development:
 you can copy the results from all cases for one or more obfuscation methods and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
