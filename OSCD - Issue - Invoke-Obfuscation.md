@@ -15,28 +15,47 @@ $env:path
 # type token example
 [Scriptblock]::Create("Write-Host $env:path")
 ```
-
-<br><br>
-<h2>Sigma rules for Invoke-Obfuscation</h2>
-<table>
-  <tr>
-    <th>GitHub Issue (list of tasks inside)</th>
-    <th>Required Knowledge</th>
-    <th>ETC per task</th>
-  </tr>
-  <tr>
-    <td><a href="%URL%" target="_blank">Living Off The Land Binaries and Scripts</a></td>
-    <td>Powershell, Regex, Sigma Rules</td>
-    <td>~ 30 min for each task</td>
-  </tr>
-</table>
-<br><br>
-
 ### Remember that our main goal here is to detect the obfuscation method itself, not a specific command.
 Some obfuscations are already covered by the Invoke-Obfuscation author himself, even for the method commented out in the framework's code:
 [Sigma Rule #1](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml),
 [Sigma Rule #2](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml),
 [Sigma Rule #3](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml). You'll encounter patterns from these rules further on, that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Due to that fact you'll see some similar obfuscation results in different tasks, that shouldn't distract you from our goal - we want to be able to detect the obfuscation method itself, not an obfuscation of a particular command, e.g. in [task 25](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation) with the STDIN+ launcher, you should pay attention to ```cmd /c``` and ```| powershell``` patterns rather than the used command example and the relevant ```$SHElLID[1]+$ShELlId[``` pattern. 
+
+<br><br>
+   <h2>Threat Detection</h2>
+   <table>
+     <tr>
+       <th>GitHub Issue (list of tasks inside)</th>
+       <th>Required Knowledge</th>
+       <th>ETC per task</th>
+     </tr>
+     <tr>
+       <td><a href="https://github.com/Neo23x0/sigma/issues/579" target="_blank">Living Off The Land Binaries and Scripts</a></td>
+       <td>Sigma Rules</td>
+       <td>< 30 min</td>
+     </tr>
+     <tr>
+       <td><a href="https://github.com/Neo23x0/sigma/issues/576" target="_blank">Lateral Movement in Windows Infrastructure</a></td>
+       <td>Splunk queries, Sigma Rules</td>
+       <td>< 30 min</td>
+     </tr>
+     <tr>
+       <td><a href="https://github.com/Neo23x0/sigma/issues/575" target="_blank">PowerShell Abuse</a></td>
+       <td>Kibana queries, Sigma Rules</td>
+       <td>< 30 min</td>
+     </tr>
+     <tr>
+       <td><a href="https://github.com/Neo23x0/sigma/issues/574" target="_blank">Privilege Escalation in Windows Environment</a></td>
+       <td>Kibana queries, Sigma Rules</td>
+       <td>< 30 min</td>
+     </tr>        
+     <tr>
+       <td><a href="%URL%" target="_blank">Develop Sigma rules for Invoke-Obfuscation</a></td>
+       <td>Powershell, Regex, Sigma Rules</td>
+       <td>~ 30 min</td>
+     </tr>
+   </table>
+<br><br>
 
 ### A little tip for your regex development:
 you can copy the results from all tasks for one or more obfuscation methods and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
