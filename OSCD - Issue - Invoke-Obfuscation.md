@@ -15,9 +15,11 @@ $env:path
 # type token example
 [Scriptblock]::Create("Write-Host $env:path")
 ```
-#### Just pick the obfuscation method and the relevant сases you prefer and develop Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the case numbers you've solved:  
+#### Just pick the сases you prefer and develop Sigma rule(s) for them. When you're done, create a Pull Request to OSCD Sigma branch and specify this issue's number and the case numbers you've solved:  
 (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1,3"*) <br/> (*e.g., "Develop Sigma rules for Invoke-Obfuscation #578 Case #1-15"*) <br/>
 #### Remember that our main goal here is to detect the obfuscation method itself, not a specific command.
+Due to framework's code you'll encounter some similar obfuscation results for some commands (explained in case 10), that shouldn't distract you from our goal - we want to be able to detect the obfuscation method itself, not an obfuscation of a particular command, e.g. in case with the STDIN+ launcher, you should pay attention to `cmd /c` and `| powershell`patterns rather than the used command example. 
+
 #### A little tip for your regex development:
 you can copy the results from all cases for one or more obfuscation methods and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
 
