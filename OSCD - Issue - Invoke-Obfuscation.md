@@ -350,6 +350,66 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### PS LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">20</td>
+  <td align="center">LAUNCHER\PS\*</td>
+  <td>
+   LAUNCHER\PS\0       NO EXECUTION FLAGS
+   <p>poWeRsHEll   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>POwErShell   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   LAUNCHER\PS\1       -NoExit
+   <p>PowERsheLl  -NOe  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>poWerSHEll  -NOEXIT   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>PoweRsheLl -NoexI   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>PowerSHEll -nOEX   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   LAUNCHER\PS\2       -NonInteractive
+   <p>pOweRShELL -NONinte    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>powersheLL  -noNiNtEraCTi   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>POWeRSHeLl -noNINTERAcT   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>POWeRSHeLl  -NONiNteR   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   LAUNCHER\PS\3       -NoLogo
+   <p>POWeRShelL  -Nol   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>POWeRsHElL -noloGo    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>PoWeRSheLl  -NOLO  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   LAUNCHER\PS\4       -NoProfile
+   <p>PoWerSHeLL -NOp  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>pOWeRSHeLl  -NOpROFi  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>pOWErsHEll -nOpROfILE  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>PowErsHELL  -NopROFil  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   LAUNCHER\PS\5       -Command
+   <p>POWERshElL -c  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>powerSHELL  -CO   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>PoWerShEll  -cOMmAn    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>poWeRShElL  -COMmANd   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   LAUNCHER\PS\6       -WindowStyle Hidden
+   <p>POWershEll -wINdOWs HIDden   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>pOWERsheLL -wIn hIdd   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>powersHELL -wINd 1   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>poWerShelL -WinDoW 1   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>POwERsHELl -wINDowsTYl  1    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>poWeRshell -WIndOWStyL  hI    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>POwERshElL  -Wi  HiDdEN    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   LAUNCHER\PS\7       -ExecutionPolicy Bypass
+   <p>pOwerShelL -EXEcUt BYPasS  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>PoWeRsheLL -Ep bypasS  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>pOwersHELl  -EXec  byPaSs   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>PoWeRshell  -eXecUtIO  ByPaSs   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>poWErsHeLL  -eX ByPass    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   LAUNCHER\PS\8       -Wow64 (to path 32-bit powershell.exe)
+   <p>C:\WInDows\sySwoW64\wINDowSPOWERShell\v1.0\poWeRShElL.ExE   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>c:\WindoWs\SYsWOw64\WiNDOWSpowERsHElL\V1.0\POwErSHeLL.exE    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>c:\WINDOws\SYSwOw64\WindowsPOwerShELl\v1.0\pOWErSHeLL.eXe   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+  </td>
+  <td align="left">These options just change the way of execution, it should be enough to just check for those keys</td>
+ </tr>
+</table> 
 
 ### CMD LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
