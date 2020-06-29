@@ -24,6 +24,9 @@ Some obfuscations are already covered by the Invoke-Obfuscation author himself, 
 #### A little tip for your regex development:
 you can copy the results from all tasks for one or more obfuscation methods and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
 
+#### Case Sensitivity.
+For the sake of this issue and until no further adieu, we shall consider that we're able to apply all regexes as not case sensitive or that all events are lowercased in a pipeline.
+
 #### IMPORTANT! This is Open Security Collaborative Development, which is an Open international cybersecurity specialist initiative aiming to solve common problems, share knowledge, and improve general security posture - DO NOT HESITATE to check the work done and improve it, if you know how!
 
 ## Contents
