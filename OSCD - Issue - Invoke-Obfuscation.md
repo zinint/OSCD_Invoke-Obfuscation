@@ -438,14 +438,14 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>Cmd   /CpOwErSHelL  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
    -------------------------------------------------------------------------------------------------------
    <p><strong>Options LAUNCHER\CMD\0 - LAUNCHER\CMD\8 of this launcher apply the same obfuscation methods for PS keys as LAUNCHER\PS\* (case 10):</strong></p>
-   <p>C:\wINDOWs\SYstEM32\CmD.EXe  /c  PoWeRsHELL  -nOexi  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>cMd.EXe  /c   PoweRSHell -nonin    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>C:\winDOWs\sYstEM32\cmD.eXE   /C   poWerSHELL  -nOlo  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>CMd.exE/c powERsHeLL -nOPROfi    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>cMD/c   pOWersHeLl  -c  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>C:\WiNDoWS\SysTEM32\cMD  /c  PowErshEll  -wI  hI   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>cmd  /c  poWERSHeLL  -Ep bYPASS   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>CMd.exE/CC:\wiNdows\SySwOw64\WindowSpOWErshelL\v1.0\PoWErshELL.Exe  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>C:\wINDOWs\SYstEM32\CmD.EXe  /c  PoWeRsHELL  -nOexi  </p>
+   <p>cMd.EXe  /c   PoweRSHell -nonin    </p>
+   <p>C:\winDOWs\sYstEM32\cmD.eXE   /C   poWerSHELL  -nOlo  </p>
+   <p>CMd.exE/c powERsHeLL -nOPROfi    </p>
+   <p>cMD/c   pOWersHeLl  -c  </p>
+   <p>C:\WiNDoWS\SysTEM32\cMD  /c  PowErshEll  -wI  hI   </p>
+   <p>cmd  /c  poWERSHeLL  -Ep bYPASS   </p>
+   <p>CMd.exE/CC:\wiNdows\SySwOw64\WindowSpOWErshelL\v1.0\PoWErshELL.Exe  </p>
    <p><strong>>>> so in this case we should only hunt for CMD indicators</strong></p>
   </td>
   <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
