@@ -179,6 +179,8 @@ you can copy the results from all cases for one or more obfuscation methods and 
  </tr>
 </table> 
 
+
+
 ### STRING OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
 <table style="word-break: keep-all;">
@@ -455,7 +457,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">21</td>
+  <td align="center">22</td>
   <td align="center">LAUNCHER\WMIC\*</td>
   <td nowrap>
    <p><strong>Options LAUNCHER\WMIC\0 - LAUNCHER\WMIC\8 of this launcher apply the same <br>obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should <br>only hunt for WMIC indicators:</strong></p>
@@ -483,7 +485,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">21</td>
+  <td align="center">23</td>
   <td align="center">LAUNCHER\RUNDLL\*</td>
   <td nowrap>
    <p><strong>Options LAUNCHER\RUNDLL\0 - LAUNCHER\RUNDLL\8 of this launcher apply the same <br>obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should <br>only hunt for RUNDLL indicators:</strong></p>
@@ -511,7 +513,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">20</td>
+  <td align="center">24</td>
   <td align="center">LAUNCHER\VAR+\*</td>
   <td>
    <p><strong>Options LAUNCHER\VAR+\0 - LAUNCHER\VAR+\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for VAR+ indicators:</strong></p>
@@ -539,7 +541,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">20</td>
+  <td align="center">25</td>
   <td align="center">LAUNCHER\STDIN+\*</td>
   <td>
    <p><strong>Options LAUNCHER\STDIN+\0 - LAUNCHER\STDIN+\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for STDIN+ indicators:</strong></p>
@@ -567,7 +569,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">20</td>
+  <td align="center">26</td>
   <td align="center">LAUNCHER\CLIP+\*</td>
   <td>
    <p><strong>Options LAUNCHER\CLIP+\0 - LAUNCHER\CLIP+\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for CLIP+ indicators:</strong></p>
@@ -595,7 +597,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">20</td>
+  <td align="center">27</td>
   <td align="center">LAUNCHER\VAR++\*</td>
   <td>
    <p><strong>Options LAUNCHER\VAR++\0 - LAUNCHER\VAR++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for VAR++ indicators:</strong></p>
@@ -623,7 +625,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">20</td>
+  <td align="center">28</td>
   <td align="center">LAUNCHER\STDIN++\*</td>
   <td>
    <p><strong>Options LAUNCHER\STDIN++\0 - LAUNCHER\STDIN++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for STDIN++ indicators:</strong></p>
@@ -651,7 +653,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">20</td>
+  <td align="center">29</td>
   <td align="center">LAUNCHER\CLIP++\*</td>
   <td>
    <p><strong>Options LAUNCHER\CLIP++\0 - LAUNCHER\CLIP++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for CLIP++ indicators:</strong></p>
@@ -679,7 +681,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">20</td>
+  <td align="center">30</td>
   <td align="center">LAUNCHER\RUNDLL++\*</td>
   <td>
    <p><strong>Options LAUNCHER\RUNDLL++\0 - LAUNCHER\RUNDLL++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for RUNDLL++ indicators:</strong></p>
@@ -707,7 +709,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <th align="center">Comments</th>
  </tr>
  <tr>
-  <td align="center">20</td>
+  <td align="center">31</td>
   <td align="center">LAUNCHER\MSHTA++\*</td>
   <td>
    <p><strong>Options LAUNCHER\MSHTA++\0 - LAUNCHER\MSHTA++\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for MSHTA++ indicators:</strong></p>
