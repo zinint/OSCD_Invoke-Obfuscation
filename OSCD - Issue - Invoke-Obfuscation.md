@@ -6,7 +6,7 @@ You can pick up some of the methods of PowerShell command and script obfuscation
 *It's always good to know the instrument (:*
 * And a great presentation is [here](https://www.sans.org/cyber-security-summit/archives/file/summit-archive-1492186586.pdf), it basically shows why we are doomed...joking, there's just a lot of work to do together:<br/> "*Real Security versus Hope fueled by Ignorance*" – Jeffrey Snover.       
 
-#### Original code (before obfuscation)
+### Original code (before obfuscation)
 ```powershell
 # command example
 Invoke-Expression (New-Object Net.WebClient).DownloadString
@@ -15,19 +15,19 @@ $env:path
 # type token example
 [Scriptblock]::Create("Write-Host $env:path")
 ```
-#### Remember that our main goal here is to detect the obfuscation method itself, not a specific command.
+### Remember that our main goal here is to detect the obfuscation method itself, not a specific command.
 Some obfuscations are already covered by the Invoke-Obfuscation author himself, even for the method commented out in the framework's code:
 [Sigma Rule #1](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml),
 [Sigma Rule #2](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml),
 [Sigma Rule #3](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml). You'll encounter patterns from these rules further on, that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Due to that fact you'll see some similar obfuscation results in different cases, that shouldn't distract you from our goal - we want to be able to detect the obfuscation method itself, not an obfuscation of a particular command, e.g. in [task 25](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation) with the STDIN+ launcher, you should pay attention to ```cmd /c``` and ```| powershell``` patterns rather than the used command example or the relevant ```$SHElLID[1]+$ShELlId[``` pattern. 
 
-#### A little tip for your regex development:
+### A little tip for your regex development:
 you can copy the results from all tasks for one or more obfuscation methods and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
 
-#### Case Sensitivity.
+### Case Sensitivity.
 For the sake of this issue and until no further adieu, we shall consider that we're able to apply all regexes as not case sensitive or that all events are lowercased in a pipeline.
 
-#### IMPORTANT! This is Open Security Collaborative Development, which is an Open international cybersecurity specialist initiative aiming to solve common problems, share knowledge, and improve general security posture - DO NOT HESITATE to check the work done and improve it, if you know how!
+### IMPORTANT! This is Open Security Collaborative Development, which is an Open international cybersecurity specialist initiative aiming to solve common problems, share knowledge, and improve general security posture - DO NOT HESITATE to check the work done and improve it, if you know how!
 
 ## Contents
 ##### SINGLE OBFUSCATION
