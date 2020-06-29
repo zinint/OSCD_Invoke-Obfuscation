@@ -415,7 +415,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>c:\WindoWs\SYsWOw64\WiNDOWSpowERsHElL\V1.0\POwErSHeLL.exE    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
    <p>c:\WINDOws\SYSwOw64\WindowsPOwerShELl\v1.0\pOWErSHeLL.eXe   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
   </td>
-  <td align="left">These options just change the way of execution, it should be enough to just check for those keys</td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
  </tr>
 </table> 
 
