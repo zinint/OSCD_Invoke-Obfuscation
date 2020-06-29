@@ -533,7 +533,31 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### STDIN+ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">20</td>
+  <td align="center">LAUNCHER\STDIN+\*</td>
+  <td>
+   <p><strong>Options LAUNCHER\STDIN+\0 - LAUNCHER\STDIN+\8 of this launcher just apply different PS keys the same way as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for STDIN+ indicators:</strong></p>
+   <p>cmd  /C"echo\Invoke-Expression (New-Object Net.WebClient).DownloadString |  poWErShelL   $EXECUTionCOnteXT.iNVoKEcoMMand.inVokeScrIpt(  ${iNPuT})"</p>
+   <p>c:\windows\sYstEm32\CmD.eXE   /C"echO\Invoke-Expression (New-Object Net.WebClient).DownloadString  |  POwersHELl -NoEXiT   -"</p>
+   <p>c:\wInDOws\SYstem32\CMd  /c   " echO Invoke-Expression (New-Object Net.WebClient).DownloadString  | pOWerShell -noNInTeRAcTi    ${iNPUt} ^|. ( ([sTRiNg]$VERBosEPrEfErENcE)[1,3]+'x'-JOin'')"</p>
+   <p>c:\WiNDOws\sysTEm32\cmd.EXe  /C  "  ECHo Invoke-Expression (New-Object Net.WebClient).DownloadString  | POwersHELl  -nol  ${EXEcUtIONCONTeXT}.INvOkEComMANd.InvOKEScRIPt(  $InpUt  )"</p>
+   <p>CMd.eXe  /c   "eCHO/Invoke-Expression (New-Object Net.WebClient).DownloadString |  poWeRSHeLL  -nOprof  ${EXecUTiONCOnTEXT}.iNVOkecOmManD.INvOkesCrIPt($iNpUT)"</p>
+   <p>C:\wiNDoWS\sYSTEm32\cMd  /C"ECHo\Invoke-Expression (New-Object Net.WebClient).DownloadString  |  POWeRSHElL  -coMma   $inpUT^| iEx"</p>
+   <p>c:\wInDows\SYsteM32\CMd.Exe  /c  "  EChO Invoke-Expression (New-Object Net.WebClient).DownloadString |  pOwershELl -winDoWSt HIDDEN   (Get-iTeM 'VariABLE:eX*Xt').ValuE.InVokecomMAND.InVoKeScRIPT(${inPuT})"</p>
+   <p>c:\wiNDoWS\SySTem32\cmd   /C  "  ECho Invoke-Expression (New-Object Net.WebClient).DownloadString | poweRsheLL  -ExEcUTiONpOl bYPASS     . ( $SHElLID[1]+$ShELlId[13]+'x')(${inpuT} )"</p>
+   <p>cMD /C   "ECHO\Invoke-Expression (New-Object Net.WebClient).DownloadString  | C:\wiNdOwS\SYswow64\WIndOwSPoWeRSHelL\V1.0\powerSHell.Exe   (ls 'variabLE:EXECuTiONcontext').vaLuE.InVoKEcoMMANd.InvOkescRipt($inPUT  )"</p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table> 
 
 ### CLIP+ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
