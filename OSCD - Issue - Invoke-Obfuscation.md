@@ -477,7 +477,31 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### RUNDLL LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">21</td>
+  <td align="center">LAUNCHER\RUNDLL\*</td>
+  <td nowrap>
+   <p><strong>Options LAUNCHER\RUNDLL\0 - LAUNCHER\RUNDLL\8 of this launcher apply the same <br>obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should <br>only hunt for RUNDLL indicators:</strong></p>
+   <p>C:\wINDoWs\systEm32\RUndll32.eXE  SHELL32.DLL,,,   ShellExec_RunDLL  "PowERsHELl"</p>
+   <p>c:\WindowS\sysTEm32\RunDlL32.eXe  SHELL32.DLL ShellExec_RunDLL   "pOWERSHeLl"   "  -nOex  "</p>
+   <p>C:\windOwS\sySTEm32\rUNDll32.Exe SHELL32.DLL, ,,ShellExec_RunDLL  "PowErShell"   "-noninTERACtIve"</p>
+   <p>RunDLL32  SHELL32.DLL ShellExec_RunDLL "pOwersHeLl"   "-NoloG  "</p>
+   <p>c:\wIndoWs\SystEM32\RundlL32.eXe SHELL32.DLL ShellExec_RunDLL   "poweRsHEll"   " -nopR "</p>
+   <p>c:\WINdOwS\SySTem32\runDLl32.ExE  SHELL32.DLL, ,, ShellExec_RunDLL "pOwersHELl" " -cOMMaND "</p>
+   <p>C:\wIndOWS\SySteM32\ruNDLl32   SHELL32.DLL, , , ShellExec_RunDLL   "powErSHEll"   "-Wi  HIddeN"</p>
+   <p>rUNDLL32 SHELL32.DLL,   ,ShellExec_RunDLL   "POwErshElL"   "-EXecUti  byPASS "</p>
+   <p>RUndLL32  SHELL32.DLL ShellExec_RunDLL  "c:\WinDows\sysWow64\wInDowsPOWeRsHeLL\V1.0\powerSHeLl.EXE"</p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table>
 
 ### VAR+ LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
