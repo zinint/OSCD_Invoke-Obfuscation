@@ -432,12 +432,8 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="center">21</td>
   <td align="center">LAUNCHER\CMD\*</td>
   <td>
-   <strong>LAUNCHER\CMD\*      NO EXECUTION FLAGS</strong>
-   <p>cMD  /c   poWersHEll   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>C:\WindOws\SYSTem32\CMd.ExE   /c poweRSHelL   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>Cmd   /CpOwErSHelL  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   -------------------------------------------------------------------------------------------------------
    <p><strong>Options LAUNCHER\CMD\0 - LAUNCHER\CMD\8 of this launcher apply the same obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>:</strong></p>
+   <p>cMD  /c   poWersHEll   </p>
    <p>C:\wINDOWs\SYstEM32\CmD.EXe  /c  PoWeRsHELL  -nOexi  </p>
    <p>cMd.EXe  /c   PoweRSHell -nonin    </p>
    <p>C:\winDOWs\sYstEM32\cmD.eXE   /C   poWerSHELL  -nOlo  </p>
@@ -454,7 +450,32 @@ you can copy the results from all cases for one or more obfuscation methods and 
 
 ### WMIC LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
-
+<table style="word-break: keep-all;">
+ <tr>
+  <th align="center">Case #</th>
+  <th align="center">Option</th>
+  <th align="center">Results</th>
+  <th align="center">Comments</th>
+ </tr>
+ <tr>
+  <td align="center">21</td>
+  <td align="center">LAUNCHER\WMIC\*</td>
+  <td>
+   <p><strong>Options LAUNCHER\WMIC\0 - LAUNCHER\WMIC\8 of this launcher apply the same obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>:</strong></p>
+   <p>WMIC "ProcESs"    CaLL   CREATE   "powersHELl</p>
+   <p>wMIC.exE 'PRoceSS'  'caLL'  crEatE  "poWERshelL  -nOeXiT</p>
+   <p>c:\wINdoWS\sYstEM32\wbem\Wmic 'PrOCEss'    cALl    CReAtE "poWERShELl  -nONINtERac</p>
+   <p>wmic 'pRoCEss'  "caLL"  cReaTE "powErsHEll -nOLOGO</p>
+   <p>WMIC  PrOCESS   "caLL" 'cReAte'   "poWeRShEll -NOp</p>
+   <p>C:\windoWS\sysTEm32\wbem\WmiC.ExE  PROCeSS  'caLl' 'CREatE'  </p>
+   <p>c:\wINdOWS\systEm32\WbEM\wMic.EXE  PRocESs     CALL   cReate  "PowERsHell  -w HIDdE</p>
+   <p>wMic.Exe   "PrOCESS"    CAlL    creaTE  "POWershelL  -EXEcuTIOnpo BYpaSS    I</p>
+   <p>wmIc.eXE   "PRoCEss" "cALl"  'CreAte' "c:\WiNdows\sYswOW64\wINDOwspowErSHElL\V1.0\powerShelL.ExE</p>
+   <p><strong>>>> so in this case we should only hunt for WMIC indicators</strong></p>
+  </td>
+  <td align="left">These options just change the way of execution, it might be enough to just check for those keys</td>
+ </tr>
+</table> 
 
 ### RUNDLL LAUNCHER OBFUSCATION
 [Back to the Contents :page_facing_up:](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#contents)
