@@ -432,7 +432,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="center">21</td>
   <td align="center">LAUNCHER\CMD\*</td>
   <td nowrap>
-   <p><strong>Options LAUNCHER\CMD\0 - LAUNCHER\CMD\8 of this launcher apply the same obfuscation <br> methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for CMD indicators:</strong></p>
+   <p><strong>Options LAUNCHER\CMD\0 - LAUNCHER\CMD\8 of this launcher apply the same <br>obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should <br>only hunt for CMD indicators:</strong></p>
    <p>cMD  /c   poWersHEll   </p>
    <p>C:\wINDOWs\SYstEM32\CmD.EXe  /c  PoWeRsHELL  -nOexi  </p>
    <p>cMd.EXe  /c   PoweRSHell -nonin    </p>
@@ -460,7 +460,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
   <td align="center">21</td>
   <td align="center">LAUNCHER\WMIC\*</td>
   <td nowrap>
-   <p><strong>Options LAUNCHER\WMIC\0 - LAUNCHER\WMIC\8 of this launcher apply the same obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should only hunt for WMIC indicators:</strong></p>
+   <p><strong>Options LAUNCHER\WMIC\0 - LAUNCHER\WMIC\8 of this launcher apply the same <br>obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>, so in this case we should <br>only hunt for WMIC indicators:</strong></p>
    <p>WMIC "ProcESs"    CaLL   CREATE   "powersHELl</p>
    <p>wMIC.exE 'PRoceSS'  'caLL'  crEatE  "poWERshelL  -nOeXiT</p>
    <p>c:\wINdoWS\sYstEM32\wbem\Wmic 'PrOCEss'    cALl    CReAtE "poWERShELl  -nONINtERac</p>
