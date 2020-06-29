@@ -437,7 +437,7 @@ you can copy the results from all cases for one or more obfuscation methods and 
    <p>C:\WindOws\SYSTem32\CMd.ExE   /c poweRSHelL   "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
    <p>Cmd   /CpOwErSHelL  "Invoke-Expression (New-Object Net.WebClient).DownloadString"</p>
    -------------------------------------------------------------------------------------------------------
-   <p><strong>Options LAUNCHER\CMD\0 - LAUNCHER\CMD\8 of this launcher apply the same obfuscation methods for PS keys as LAUNCHER\PS\* (case 10):</strong></p>
+   <p><strong>Options LAUNCHER\CMD\0 - LAUNCHER\CMD\8 of this launcher apply the same obfuscation methods for PS keys as <a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#ps-launcher-obfuscation"> LAUNCHER\PS\* (case 10)</a>:</strong></p>
    <p>C:\wINDOWs\SYstEM32\CmD.EXe  /c  PoWeRsHELL  -nOexi  </p>
    <p>cMd.EXe  /c   PoweRSHell -nonin    </p>
    <p>C:\winDOWs\sYstEM32\cmD.eXE   /C   poWerSHELL  -nOlo  </p>
