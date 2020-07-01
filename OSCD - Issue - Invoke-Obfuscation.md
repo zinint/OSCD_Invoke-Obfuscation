@@ -94,7 +94,7 @@ He used these regexes in his rules:
 \String\]\s*\$VerbosePreference
 ```
 These regexes provide detection for this particular block of code for [obfuscated IEX invocation](https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-ObfuscatedStringCommand.ps1#L873-L888). This code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Thats why you'll see some similar obfuscation results in different tasks, e.g.:
-* in [task 25]() with the STDIN+ Launcher, in this obfuscation example:<br/>
+* in [task 25]() with STDIN+ Launcher, in this obfuscation example:<br/>
 ```c:\wiNDoWS\SySTem32\cmd   /C  "  ECho Invoke-Expression (New-Object Net.WebClient).DownloadString | poweRsheLL  -ExEcUTiONpOl bYPASS     . ( $SHElLID[1]+$ShELlId[13]+'x')(${inpuT} )"```<br/>
 you should pay attention to ```cmd   /C``` and ```| poweRsheLL``` patterns, rather than the ```$SHElLID[1]+$ShELlId[``` pattern, which is already covered by another [Sigma rule](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml);
 * in [task 28]() with STDIN++ Launcher, in this obfuscation example:<br/>
