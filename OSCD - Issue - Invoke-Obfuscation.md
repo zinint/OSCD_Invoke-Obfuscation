@@ -27,7 +27,7 @@ We would like to collaborate on Sigma rules development in this area.
 
 ## Solution
 
-We developed a table with pre-generated PowerShell commands, obfuscated by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework, and develop Sigma rules for them. You will need to use [regular expression value modifier](https://github.com/Neo23x0/sigma/wiki/Specification#types),  provided by Sigma converter (sigmac). 
+We developed a table with pre-generated PowerShell commands, obfuscated by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework, you can pick up some of the tasks in that table and develop Sigma rules for them. You will need to use [regular expression value modifier](https://github.com/Neo23x0/sigma/wiki/Specification#types),  provided by Sigma converter (sigmac). 
 
 Here is an example of [Sigma rule](https://github.com/Neo23x0/sigma/blob/oscd/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml) that utilize regular expression value modifier (`|re`):
 
@@ -83,8 +83,19 @@ $env:path
 ### Keep in mind that our main goal here is to detect the obfuscation method itself, not a specific command
 
 Some obfuscations are already covered by the Invoke-Obfuscation author himself, even for the method commented out in the framework's code.
-
-You'll encounter patterns from these rules further on, that's because the source code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Due to that fact you'll see some similar obfuscation results in different tasks, that shouldn't distract you from our goal - we want to be able to detect the obfuscation method itself, not an obfuscation of a particular command, e.g. in [task 25](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#stdin-launcher-obfuscation) with the STDIN+ launcher, you should pay attention to ```cmd /c``` and ```| powershell``` patterns rather than the used command example and the relevant ```$SHElLID[1]+$ShELlId[``` pattern. 
+He used these regexes in his rules:
+```
+\$PSHome\[\s*\d{1,3}\s*\]\s*\+\s*\$PSHome\[
+\$ShellId\[\s*\d{1,3}\s*\]\s*\+\s*\$ShellId\[
+\$env:Public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:Public\[
+\$env:ComSpec\[(\s*\d{1,3}\s*,){2}
+\*mdr\*\W\s*\)\.Name
+\$VerbosePreference\.ToString\(
+\String\]\s*\$VerbosePreference
+```
+These regexes provide detection for this particular block of code [obfuscated IEX invocation](https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-ObfuscatedStringCommand.ps1#L873-L888). This code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Thats why you'll see some similar obfuscation results in different tasks (because we also use IEX invocation as our command example), e.g.:
+* in [task 25]() with the STDIN+ Launcher, you should pay attention to ```cmd /c``` and ```| powershell``` patterns, rather than the obuscation result of the used command example and the relevant ```$SHElLID[1]+$ShELlId[``` pattern, which is already covered by Daniel's rule;
+* in [task 28]() with STDIN++ Launcher, you should pay attention to ```&& sEt```, ```^|PowersHElL``` and ```&&  CMd``` patterns, rather than the obuscation result of the used command example and the relevant ```$Env:cOmSPec[4,26,25]-jOiN``` pattern, which is already covered by Daniel's rule;
 
 ### A little tip for your regex development:
 
