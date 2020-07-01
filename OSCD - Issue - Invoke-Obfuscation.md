@@ -111,7 +111,7 @@ These regexes provide detection for this particular block of code for [obfuscate
 5. Start to develop your own regex that will cover all of the obfuscation examples of this particuar obfuscation method, e.g.:<br/>
 5.1. Regex ```.*cmd.*\/c.*\^\|.*powershell.*&&.*cmd.*\/c``` covers all examples:<br/>
 ![example 4](https://i.ibb.co/gPsWGKF/image.png)
-And that is exatly what our main goal is - detect the obfuscation method looking for similar patterns in all of it obfuscation examples. 
+And that is our main goal - detect the obfuscation method looking for similar patterns in all of it obfuscation examples. 
 
 ### A little tip for your regex development:
 
