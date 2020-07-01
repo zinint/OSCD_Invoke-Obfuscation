@@ -99,18 +99,18 @@ These regexes provide detection for this particular block of code for [obfuscate
 3. Paste all lowecased examples to regex101 or other regex editor of your choice.
 4. Start to apply lowercased regexes from existing [Sigma rule created by Daniel Bohannon](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml) one by one:<br/>
 4.1. Regex ```\$pshome\[\s*\d{1,3}\s*\]\s*\+\s*\$pshome\[``` covers only one example:<br/>
-![example 1](https://i.ibb.co/5s8MYXh/image.png)
+![example 1](https://i.ibb.co/5s8MYXh/image.png)<br/>
 4.2. Regex ```\$shellid\[\s*\d{1,3}\s*\]\s*\+\s*\$shellid\[``` covers only one example:<br/>
-![example 2](https://i.ibb.co/hLBsfwk/image.png)
-4.3. Regex ```\$env:public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:public\[``` don't cover any examples.
+![example 2](https://i.ibb.co/hLBsfwk/image.png)<br/>
+4.3. Regex ```\$env:public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:public\[``` don't cover any examples.<br/>
 4.4. Regex ```\$env:comspec\[(\s*\d{1,3}\s*,){2}``` covers only one example:<br/>
-![example 3](https://i.ibb.co/DtNH550/image.png)
-4.5. Regex ```\*mdr\*\w\s*\)\.name``` don't cover any examples.
-4.6. Regex ```\$verbosepreference\.tostring\(``` don't cover any examples.
-4.7. Regex ```\string\]\s*\$verbosepreference``` don't cover any examples.
-5. Start to develop your own regex that will cover all of the obfuscation examples of this particuar obfuscation method, e.g.:
+![example 3](https://i.ibb.co/DtNH550/image.png)<br/>
+4.5. Regex ```\*mdr\*\w\s*\)\.name``` don't cover any examples.<br/>
+4.6. Regex ```\$verbosepreference\.tostring\(``` don't cover any examples.<br/>
+4.7. Regex ```\string\]\s*\$verbosepreference``` don't cover any examples.<br/>
+5. Start to develop your own regex that will cover all of the obfuscation examples of this particuar obfuscation method, e.g.:<br/>
 5.1. Regex ```.*cmd.*\/c.*\^\|.*powershell.*&&.*cmd.*\/c``` covers all examples:<br/>
-![example 4](https://i.ibb.co/nPkHN4g/image.png)
+![example 4](https://i.ibb.co/nPkHN4g/image.png)<br/>
 And that is exatly what our main goal is - detect the obfuscation method looking for similar patterns in all of it obfuscation examples. 
 
 ### A little tip for your regex development:
