@@ -67,7 +67,7 @@ Each Sigma rule for a specific PowerShell obfuscation method should be developed
 
 ## List of tasks
 
-We developed a table with pre-generated PowerShell commands, obfuscated by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework. The description of the approach is followinfg.
+We developed a table with pre-generated PowerShell commands, obfuscated by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework. The description of the approach is following.
 
 ### Original code (before obfuscation)
 
