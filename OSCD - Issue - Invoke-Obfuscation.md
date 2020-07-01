@@ -97,7 +97,7 @@ These regexes provide detection for this particular block of code for [obfuscate
 1. First of all copy all obfuscation examples into [Sublime](https://www.sublimetext.com/) or other text editor of your choice.
 2. Select all examples and lowercase them, in Sublime you can do it by pressing Ctrl+k, Ctrl+l.
 3. Paste all lowecased examples to regex101 or other regex editor of your choice.
-4. Start to apply lowercased regexes from existing Sigma rule created by Daniel Bohannon one by one:
+4. Start to apply lowercased regexes from existing Sigma rule created by Daniel Bohannon one by one:<br/>
 4.1. Regex ```\$pshome\[\s*\d{1,3}\s*\]\s*\+\s*\$pshome\[``` covers only one example:<br/>
 ![example 1](https://i.ibb.co/5s8MYXh/image.png)
 4.2. Regex ```\$shellid\[\s*\d{1,3}\s*\]\s*\+\s*\$shellid\[``` covers only one example:<br/>
