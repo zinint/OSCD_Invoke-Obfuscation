@@ -93,13 +93,25 @@ He used these regexes in his rules:
 \$VerbosePreference\.ToString\(
 \String\]\s*\$VerbosePreference
 ```
-These regexes provide detection for this particular block of code for [obfuscated IEX invocation](https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-ObfuscatedStringCommand.ps1#L873-L888). This code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Thats why you'll see some similar obfuscation results in different tasks, e.g.:
-* in [task 25](), in this obfuscation example:<br/>
-```c:\wiNDoWS\SySTem32\cmd   /C  "  ECho Invoke-Expression (New-Object Net.WebClient).DownloadString | poweRsheLL  -ExEcUTiONpOl bYPASS     . ( $SHElLID[1]+$ShELlId[13]+'x')(${inpuT} )"```<br/>
-you should pay attention to ```cmd   /C``` and ```| poweRsheLL``` patterns, rather than the ```$SHElLID[1]+$ShELlId[``` pattern, which is already covered by another [Sigma rule](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml);
-* in [task 28](), in this obfuscation example:<br/>
-```CmD.EXE /C "SeT   khW=Invoke-Expression (New-Object Net.WebClient).DownloadString&&Set   XWPGa=ecHO ${EXECuTIonCOntext}.inVOKeCommand.iNVoKESCRipt((GeT-iTem EnV:khW).vaLuE  )  ^|PoWERsHell -nOproF      .( $Env:cOmSPec[4,26,25]-jOiN'')( ${inPuT} )   &&CmD.EXE /C%XWpGA%"```<br/>
-you should pay attention to ```&&Set```, ```^|PoWERsHell``` and ```&&CmD``` patterns, rather than the ```$Env:cOmSPec[4,26,``` pattern, which is already covered by another [Sigma rule](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml).
+These regexes provide detection for this particular block of code for [obfuscated IEX invocation](https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-ObfuscatedStringCommand.ps1#L873-L888). This code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Thats why you'll see some similar obfuscation results in different tasks, but they shouldn't distract you from our main goal. Lets take [task 28]() as an example and walk through it together to understand what we are trying to say:
+1. First of all copy all obfuscation examples into [Sublime](https://www.sublimetext.com/) or other text editor of your choice.
+2. Select all examples and lowercase them, in Sublime you can do it by pressing Ctrl+k, Ctrl+l.
+3. Paste all lowecased examples to regex101 or other regex editor of your choice.
+4. Start to apply lowercased regexes from existing Sigma rule created by Daniel Bohannon one by one:
+4.1. Regex ```\$pshome\[\s*\d{1,3}\s*\]\s*\+\s*\$pshome\[``` covers only one example:<br/>
+![example 1](https://i.ibb.co/5s8MYXh/image.png)
+4.2. Regex ```\$shellid\[\s*\d{1,3}\s*\]\s*\+\s*\$shellid\[``` covers only one example:<br/>
+![example 2](https://i.ibb.co/hLBsfwk/image.png)
+4.3. Regex ```\$env:public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:public\[``` don't cover any examples.
+4.4. Regex ```\$env:comspec\[(\s*\d{1,3}\s*,){2}``` covers only one example:<br/>
+![example 3](https://i.ibb.co/DtNH550/image.png)
+4.5. Regex ```\*mdr\*\w\s*\)\.name``` don't cover any examples.
+4.6. Regex ```\$verbosepreference\.tostring\(``` don't cover any examples.
+4.7. Regex ```\string\]\s*\$verbosepreference``` don't cover any examples.
+5. Start to develop your own regex that will cover all of the obfuscation examples of this particuar obfuscation method, e.g.:
+5.1. Regex ```.*cmd.*\/c.*\^\|.*powershell.*&&.*cmd.*\/c``` covers all examples:<br/>
+![example 4](https://i.ibb.co/nPkHN4g/image.png)
+And that is exatly what our main goal is - detect the obfuscation method looking for similar patterns in all of it obfuscation examples. 
 
 ### A little tip for your regex development:
 
