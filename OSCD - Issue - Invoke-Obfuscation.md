@@ -102,12 +102,12 @@ These regexes provide detection for this particular block of code for [obfuscate
 ![example 1](https://i.ibb.co/5s8MYXh/image.png)<br/>
 4.2. Regex ```\$shellid\[\s*\d{1,3}\s*\]\s*\+\s*\$shellid\[``` covers only one example:<br/>
 ![example 2](https://i.ibb.co/hLBsfwk/image.png)<br/>
-4.3. Regex ```\$env:public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:public\[``` don't cover any examples.<br/>
+4.3. Regex ```\$env:public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:public\[``` doesn't cover any examples.<br/>
 4.4. Regex ```\$env:comspec\[(\s*\d{1,3}\s*,){2}``` covers only one example:<br/>
 ![example 3](https://i.ibb.co/DtNH550/image.png)<br/>
-4.5. Regex ```\*mdr\*\w\s*\)\.name``` don't cover any examples.<br/>
-4.6. Regex ```\$verbosepreference\.tostring\(``` don't cover any examples.<br/>
-4.7. Regex ```\string\]\s*\$verbosepreference``` don't cover any examples.<br/>
+4.5. Regex ```\*mdr\*\w\s*\)\.name``` doesn't cover any examples.<br/>
+4.6. Regex ```\$verbosepreference\.tostring\(``` doesn't cover any examples.<br/>
+4.7. Regex ```\string\]\s*\$verbosepreference``` doesn't cover any examples.<br/>
 5. Start to develop your own regex that will cover all of the obfuscation examples of this particuar obfuscation method, e.g.:<br/>
 5.1. Regex ```.*cmd.*\/c.*\^\|.*powershell.*&&.*cmd.*\/c``` covers all examples:<br/>
 ![example 4](https://i.ibb.co/gPsWGKF/image.png)
