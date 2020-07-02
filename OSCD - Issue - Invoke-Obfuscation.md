@@ -96,7 +96,7 @@ Let's walk through the [task 28]() to get more details on the regex development 
 
 1. Copy all obfuscated commands examples into [Sublime](https://www.sublimetext.com/) or other text editor of your choice
 
-2. Select all examples and lowercase them. In Sublime you can do it by pressing `Ctrl+l, Ctrl+l` (Windows) / `CMD+k, CMD+l` (Mac)
+2. Select all examples and lowercase them. In Sublime you can do it by pressing `Ctrl+k, Ctrl+l` (Windows) / `CMD+k, CMD+l` (Mac)
 
 3. Paste the lowecased examples to the regex editor of your choice
 
