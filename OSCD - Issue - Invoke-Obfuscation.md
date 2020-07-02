@@ -22,7 +22,7 @@ There are a five Sigma rules for PowerShell obfuscation detection, developed by 
 - CrackMapExec PowerShell Obfuscation ([6f8b3439-a203-45dc-a88b-abf57ea15ccf](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_crackmapexec_powershell_obfuscation.yml))
 - CrackMapExec Command Execution ([058f4380-962d-40a5-afce-50207d36d7e2](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_crackmapexec_execution.yml))
 
-At the same time, there and only three Sigma rules (developed by Daniel Bohannon, @danielbohannon) that are focusing on detection of one of the obfuscation functions ([obfuscated IEX invocation](https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-ObfuscatedStringCommand.ps1#L873-L888)) provided by [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework.
+At the same time, there and only three Sigma rules (developed by Daniel Bohannon, @danielhbohannon) that are focusing on detection of one of the obfuscation functions ([obfuscated IEX invocation](https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-ObfuscatedStringCommand.ps1#L873-L888)) provided by [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework.
 
 There are at least 30 more obfuscation methods that Invoke-Obfuscation framework provides.  
 We would like to collaborate on Sigma rules development in this area.
