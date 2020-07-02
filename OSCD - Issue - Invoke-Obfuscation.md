@@ -10,7 +10,9 @@
 
 ## Problem
 
-The Sigma rules heavily rely on process execution (with command-line) events (Windows Event Log Security Event ID 4688 and Sysmon Event ID 1), but the presence of Sigma rules for Powershell Obfuscation Indicators detection is quite limited.
+Sigma rules heavily rely on process execution (with command-line) events (Windows Event Log Security Event ID 4688 and Sysmon Event ID 1). 
+Many of them provide detection of malicious PowerShell one-liners. 
+At the same time, the presence of Sigma rules for Powershell Obfuscation Indicators detection is quite limited. 
 
 There are a five Sigma rules for PowerShell obfuscation detection, developed by Thomas Patzke (@thomaspatzke), Florian Roth (@Neo23x0), Sami Ruohonen (@samsson) and Harish Segar (@HarishHary):
 
@@ -27,9 +29,9 @@ We would like to collaborate on Sigma rules development in this area.
 
 ## Solution
 
-We developed a table with pre-generated PowerShell commands, obfuscated by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework, you can pick up some of the tasks in that table and develop Sigma rules for them. You will need to use [regular expression value modifier](https://github.com/Neo23x0/sigma/wiki/Specification#types),  provided by Sigma converter (sigmac). 
+We developed a table with pre-generated PowerShell commands, obfuscated by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework, you can pick up some of the tasks in that table and develop Sigma rules for them. You will need to use [regular expression value modifier](https://github.com/Neo23x0/sigma/wiki/Specification#types), provided by Sigma converter (sigmac).
 
-Here is an example of [Sigma rule](https://github.com/Neo23x0/sigma/blob/oscd/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml) that utilize regular expression value modifier (`|re`):
+Here is an example of [Sigma rule](https://github.com/Neo23x0/sigma/blob/oscd/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml) that utilizes a regular expression value modifier (`|re`):
 
 ```
 title: Invoke-Obfuscation obfuscated IEX invocation
@@ -59,13 +61,7 @@ falsepositives:
 level: high
 ```
 
-Each Sigma rule for a specific PowerShell obfuscation method should be developed for `process_creation` log category, **service creation** events (windows system eid 7045, windows sysmon eid 6, windows security eid 4697) and `powershell` log source. You can follow the approach used for obfuscated IEX invocation rules — there are 3 rules that rely on the same set of regular expressions:
-
-- [rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml)
-- [rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml)
-- [rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml)
-
-## List of tasks
+## The approach
 
 We developed a table with pre-generated PowerShell commands, obfuscated by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework. The description of the approach is following.
 
@@ -80,11 +76,11 @@ $env:path
 [Scriptblock]::Create("Write-Host $env:path")
 ```
 
-### Keep in mind that our main goal here is to detect the obfuscation method itself, not a specific command
+### The main goal is to detect the obfuscation method itself, not a specific command
 
-Some obfuscations are already covered by the Invoke-Obfuscation author himself, even for the method commented out in the framework's code.
-He used these regexes in his rules:
-```
+Some of the obfuscation methods are already covered by Sigma rules, developed by the Invoke-Obfuscation author. He used the following regexes in the rules:
+
+```regex
 \$PSHome\[\s*\d{1,3}\s*\]\s*\+\s*\$PSHome\[
 \$ShellId\[\s*\d{1,3}\s*\]\s*\+\s*\$ShellId\[
 \$env:Public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:Public\[
@@ -93,33 +89,51 @@ He used these regexes in his rules:
 \$VerbosePreference\.ToString\(
 \String\]\s*\$VerbosePreference
 ```
-These regexes provide detection for this particular block of code for [obfuscated IEX invocation](https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-ObfuscatedStringCommand.ps1#L873-L888). This code block is copy/pasted into almost every encoding function so they can maintain zero dependencies and work on their own. Thats why you'll see some similar obfuscation results in different tasks, but they shouldn't distract you from our main goal. Lets take [task 28]() as an example and walk through it together to understand what we are trying to say:
-1. First of all copy all obfuscation examples into [Sublime](https://www.sublimetext.com/) or other text editor of your choice.
-2. Select all examples and lowercase them, in Sublime you can do it by pressing Ctrl+k, Ctrl+l.
-3. Paste all lowecased examples to regex101 or other regex editor of your choice.
+
+These regexes provide detection of the [IEX invocation obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-ObfuscatedStringCommand.ps1#L873-L888) function. This function is included into almost every encoding method so they can maintain zero dependencies and work on their own. That's why you'll see similar obfuscation results in different tasks, but it shouldn't distract you from the main goal. 
+
+Let's walk through the [task 28]() to get more details on the regex development approach:
+
+1. Copy all obfuscated commands examples into [Sublime](https://www.sublimetext.com/) or other text editor of your choice
+
+2. Select all examples and lowercase them. In Sublime you can do it by pressing `Ctrl+l, Ctrl+l` (Windows) / `CMD+k, CMD+l` (Mac)
+
+3. Paste the lowecased examples to the regex editor of your choice
+
 4. Start to apply lowercased regexes from existing [Sigma rule created by Daniel Bohannon](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml) one by one:<br/>
-4.1. Regex ```\$pshome\[\s*\d{1,3}\s*\]\s*\+\s*\$pshome\[``` covers only one example (9th):<br/>
+4.1. Regex `\$pshome\[\s*\d{1,3}\s*\]\s*\+\s*\$pshome\[` covers only one example (9th):<br/>
 ![example 1](https://i.ibb.co/5s8MYXh/image.png)<br/>
-4.2. Regex ```\$shellid\[\s*\d{1,3}\s*\]\s*\+\s*\$shellid\[``` covers only one example (3rd):<br/>
+4.2. Regex `\$shellid\[\s*\d{1,3}\s*\]\s*\+\s*\$shellid\[` covers only one example (3rd):<br/>
 ![example 2](https://i.ibb.co/hLBsfwk/image.png)<br/>
-4.3. Regex ```\$env:public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:public\[``` doesn't cover any examples.<br/>
-4.4. Regex ```\$env:comspec\[(\s*\d{1,3}\s*,){2}``` covers only one example (5th):<br/>
+4.3. Regex `\$env:public\[\s*\d{1,3}\s*\]\s*\+\s*\$env:public\[` doesn't cover any examples.<br/>
+4.4. Regex `\$env:comspec\[(\s*\d{1,3}\s*,){2}` covers only one example (5th):<br/>
 ![example 3](https://i.ibb.co/DtNH550/image.png)<br/>
-4.5. Regex ```\*mdr\*\w\s*\)\.name``` doesn't cover any examples.<br/>
-4.6. Regex ```\$verbosepreference\.tostring\(``` doesn't cover any examples.<br/>
-4.7. Regex ```\string\]\s*\$verbosepreference``` doesn't cover any examples.<br/>
+4.5. Regex `\*mdr\*\w\s*\)\.name` doesn't cover any examples.<br/>
+4.6. Regex `\$verbosepreference\.tostring\(` doesn't cover any examples.<br/>
+4.7. Regex `\string\]\s*\$verbosepreference` doesn't cover any examples.<br/>
 5. Start to develop your own regex that will cover all of the obfuscation examples of this particuar obfuscation method, e.g.:<br/>
-5.1. Regex ```.*cmd.*\/c.*\^\|.*powershell.*&&.*cmd.*\/c``` covers all examples:<br/>
+5.1. Regex `.*cmd.*\/c.*\^\|.*powershell.*&&.*cmd.*\/c` covers all examples:<br/>
 ![example 4](https://i.ibb.co/gPsWGKF/image.png)
-And that is our main goal - detect the obfuscation method looking for similar patterns in all of it obfuscation examples. 
 
-### A little tip for your regex development:
+This is our main goal - detect the obfuscation method looking for similar patterns in all of it obfuscation examples. 
 
-You can copy the results from all tasks for one or more obfuscation methods and paste them in [regex101](https://regex101.com/) to find possible similarities while developing a regex (you can save your progress there and even apply a dark theme (: ). 
+### A little tip for the regex development
 
-### Case Sensitivity.
+You can copy all pre-generated obfuscated powershell one-liners from a particular task (that are generated by a specific obfuscation method) and paste them to [regex101](https://regex101.com/) web-app for regular expression development. It will simplify the process a lot, and help you to find patterns to detect. (you can save your progress there and even apply a dark theme (: ). 
 
-For the sake of this issue and until no further adieu, we shall consider that we're able to apply all regexes as not case sensitive or that all events are lowercased in an log pipeline before indexing in SIEM/LM system.
+### One obfuscation method = 3 Sigma rules
+
+Each Sigma rule for a specific PowerShell obfuscation method should be developed for `process_creation` log category, **service creation** events (windows system eid 7045, windows sysmon eid 6, windows security eid 4697) and `powershell` log source. You can follow the approach used for obfuscated IEX invocation rules — there are 3 rules that rely on the same set of regular expressions:
+
+- [rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml)
+- [rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml](https://github.com/Neo23x0/sigma/blob/master/rules/windows/powershell/powershell_invoke_obfuscation_obfuscated_iex.yml)
+- [rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_invoke_obfuscation_obfuscated_iex_services.yml)
+
+### Case Sensitivity
+
+We consider that we're able to apply all regexes as not case sensitive or that all events are lowercased in a log pipeline before indexing in SIEM/LM system.
+
+## Tasks
 
 ##### SINGLE OBFUSCATION
 
