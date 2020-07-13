@@ -135,6 +135,8 @@ We consider that we're able to apply all regexes as not case sensitive or that a
 
 ## Tasks
 
+If you would like to assign yourself to some of the Tasks listed below, you should comment on the Issue with a specific Task you are going to solve. This way, the other participants will see that you will work on a particular task so they will do something else and not intersect with you. 
+
 ##### SINGLE OBFUSCATION
 
   - [TOKEN OBFUSCATION](https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/OSCD%20-%20Issue%20-%20Invoke-Obfuscation.md#token-obfuscation)
