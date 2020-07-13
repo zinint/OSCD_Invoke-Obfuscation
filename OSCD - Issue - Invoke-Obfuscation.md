@@ -420,10 +420,10 @@ If you would like to assign yourself to some of the Tasks listed below, you shou
   <td align="center">17</td>
   <td align="center">ENCODING\7</td>
   <td nowrap> 
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_1">Example 1</a></p>
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_2">Example 2</a></p>
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_3">Example 3</a></p>
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_7_4">Example 4</a></p>
+   <p><a href="https://pastebin.com/C9svPR0F">Example 1</a></p>
+   <p><a href="https://pastebin.com/w7bnrT19">Example 2</a></p>
+   <p><a href="https://pastebin.com/EWvJetCd">Example 3</a></p>
+   <p><a href="https://pastebin.com/gD7xDfvn">Example 4</a></p>
   </td>
   <td align="left">This option encodes the entire command as Special Characters</td>
  </tr> 
@@ -431,10 +431,10 @@ If you would like to assign yourself to some of the Tasks listed below, you shou
   <td align="center">18</td>
   <td align="center">ENCODING\8</td>
   <td nowrap> 
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_8_1">Example 1</a></p>
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_8_2">Example 2</a></p>
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_8_3">Example 3</a></p>
-   <p><a href="https://github.com/zinint/oscd_Invoke-Obfuscation/blob/master/ENCODING_8_4">Example 4</a></p>
+   <p><a href="https://pastebin.com/zg2nHmjw">Example 1</a></p>
+   <p><a href="https://pastebin.com/KcW2WX1S">Example 2</a></p>
+   <p><a href="https://pastebin.com/qVnY9Qm2">Example 3</a></p>
+   <p><a href="https://pastebin.com/bbjKHMCW">Example 4</a></p>
   </td>
   <td align="left">This option encodes the entire command as Whitespace</td>
  </tr> 
