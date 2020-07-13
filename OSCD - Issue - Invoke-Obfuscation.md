@@ -31,7 +31,7 @@ We would like to collaborate on Sigma rules development in this area.
 
 We developed a table with pre-generated PowerShell commands, obfuscated by the [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) framework, you can pick up some of the tasks in that table and develop Sigma rules for them. You will need to use [regular expression value modifier](https://github.com/Neo23x0/sigma/wiki/Specification#types), provided by Sigma converter (sigmac).
 
-Here is an example of [Sigma rule](https://github.com/Neo23x0/sigma/blob/oscd/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml) that utilizes a regular expression value modifier (`|re`):
+Here is an example of [Sigma rule](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_invoke_obfuscation_obfuscated_iex_commandline.yml) that utilizes a regular expression value modifier (`|re`):
 
 ```YAML
 title: Invoke-Obfuscation obfuscated IEX invocation
